@@ -110,18 +110,36 @@
     function checkinput(curword, preend){
         console.log("in: checkinput");
         var headchar = curword.slice(0,1);
-        if(headchar === preend){
+
+        if(!isHiragana(curword)){
+            var err_message = 'ひらがなで入力してください';
+            botui.message.bot({
+                content: err_message
+            }).then(word_chain(preend));
+        }else if(headchar === preend ){
             console.log("checkinput: true");
             word_chain(curword);
-        }else {
+        }else if(headchar !== preend){
             console.log("checkinput: false");
             botui.message.bot({
                 content: preend + 'から始まる語を入力してください'
             }).then(word_chain(preend));
+        }else {
+            console.log("checkinput: false");
+            botui.message.bot({
+                content: '不明なエラー:もう一度、ひらがなで入力してください'
+            }).then(word_chain(preend));
         }
     }
-
-
+    //入力がひらがなかどうかを判別する関数
+    function isHiragana(str){
+        str = (str==null)?"":str;
+        if(str.match(/^[ぁ-んー　]*$/)){    //"ー"の後ろの文字は全角スペースです。
+          return true;
+        }else{
+          return false;
+        }
+      }
   
   
     //プログラムを終了する処理
