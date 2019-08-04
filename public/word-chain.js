@@ -107,30 +107,39 @@
         return endchar;
     }
     
+    //入力をチェックし、入力に応じたメッセージの表示, 入力に応じた引数でword_chainを呼び出す
     function checkinput(curword, preend){
         console.log("in: checkinput");
-        var headchar = curword.slice(0,1);
+        var curhead = curword.slice(0,1);
+        var curend = curword.slice(-1);
 
+        var err_message;
+        let collectness = false;
         if(!isHiragana(curword)){
-            var err_message = 'ひらがなで入力してください';
+            err_message = 'ひらがなで入力してください';
+        }else if(curhead !== preend){
+            err_message = preend + ' から始まる語を入力してください'
+        }else {
+            collectness = true;
+        }
+
+        if(collectness === false){
+            console.log("checkinput: false");
             botui.message.bot({
                 content: err_message
             }).then(word_chain(preend));
-        }else if(headchar === preend ){
+        }else { 
             console.log("checkinput: true");
-            word_chain(curword);
-        }else if(headchar !== preend){
-            console.log("checkinput: false");
-            botui.message.bot({
-                content: preend + 'から始まる語を入力してください'
-            }).then(word_chain(preend));
-        }else {
-            console.log("checkinput: false");
-            botui.message.bot({
-                content: '不明なエラー:もう一度、ひらがなで入力してください'
-            }).then(word_chain(preend));
+            if(curend === "ん"){
+                botui.message.bot({
+                    content: '「ん」がつきました.'
+                }).then(end);
+            }else{
+                word_chain(curword);
+            }
         }
     }
+
     //入力がひらがなかどうかを判別する関数
     function isHiragana(str){
         str = (str==null)?"":str;
@@ -145,7 +154,7 @@
     //プログラムを終了する処理
     function end() {
       botui.message.bot({
-        content: 'ご利用ありがとうございました！'
+        content: 'YOU LOSE\n俺の勝ち\nなんで負けたか、明日まで考えといてください\nほないただきます'
       })
     }
   
