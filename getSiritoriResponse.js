@@ -11,8 +11,9 @@ admin.initializeApp({
 
 
 var db = admin.database();
-var input_word = req.body.text; //入ってきた文字列の予定 somethingにそのブツを入れる HTTPのPOSTリクエストの形状によって違うのでささリュート相談
-var AlreadySaid = db.ref("AlreadySaid");
+var input_word = req.body.text;
+//入ってきた文字列の予定 somethingにそのブツを入れる HTTPのPOSTリクエストの形状によって違うのでささリュート相談
+//GET POST取得：https://maku77.github.io/nodejs/express/handle-get-and-post-data.html
 
 
 
@@ -87,6 +88,7 @@ if (last_word == 'ー' || last_word == 'っ'){ //===かも？？
 
 ////////last_word以下のデータ(レコード)数に合わせてランダムな数字を出す。num_of_wordsに格納.str型で//////////////////
 //レコード数を抜き出す方法がわからなかったので(例えばlenとかsizeみたいなもん)手打ち。辞書式とかテーブル使って工夫したら楽になったんでしょうね
+var num_of_words;
 if(last_word == "あ"){
   num_of_words = "1639";
 }else if(last_word == "い"){
