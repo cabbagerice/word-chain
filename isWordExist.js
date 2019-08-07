@@ -211,36 +211,38 @@ var num_random = Math.floor( Math.random() * num_of_words ); //importとか要�
 
 for(var i=0;i<num_of_words;i++){
   var index = String(i);
+  var replyword;
   db.ref('/PDD_hum/'+ last_word +'/'+ index +'/').on("value", function(snapshot) {
     //console.log(snapshot.val());
-    var replyword = snapshot.val();
+    replyword = snapshot.val();
 
-    if(last_word !== snapshot.val()){
+    if(input_word == snapshot.val()){
       replyword = "OK";
     }else{
       replyword = "NO";
     }
-
-    //ヘッダーを定義　ここ参考https://qiita.com/penta515/items/074b5c7694b9bcec1043 https://maku77.github.io/nodejs/express/handle-get-and-post-data.html
-    var headers = {
-      'Content-Type':'application/json'
-    };
-
-    //オプションを定義
-    var options = {
-      url: 'https://wordchain-bfb8b.firebaseapp.com/word-chain.js',
-      method: 'POST',
-      headers: headers,
-      json: true,
-      form: {"reply":replyword}
-    };
-
-    //リクエスト送信
-    request(options, function (error, response, body) {
-    });
   },
   function(errorObject) {
     console.log("The read failed: " + errorObject.code);
   } );
+
+  if(replyword == "OK") break;
 }
+//ヘッダーを定義　ここ参考https://qiita.com/penta515/items/074b5c7694b9bcec1043 https://maku77.github.io/nodejs/express/handle-get-and-post-data.html
+var headers = {
+  'Content-Type':'application/json'
+};
+
+//オプションを定義
+var options = {
+  url: 'https://wordchain-bfb8b.firebaseapp.com/word-chain.js',
+  method: 'POST',
+  headers: headers,
+  json: true,
+  form: {"reply":replyword}
+};
+
+//リクエスト送信
+request(options, function (error, response, body) {
+});
 /////////////////////////////////
