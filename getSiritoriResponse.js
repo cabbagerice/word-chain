@@ -45,8 +45,19 @@ request(options, function (error, response, body) {
 }
 
 ///////////入力文字列が辞書にあるかどうか調べる。けど、キーで検索かけれないから厳しいかも…////////////
-/*
-f ('/PDD_hum/{pushId}/' + input_word) { //{}はパスのワイルドカード。適当な値でもOK。
+
+var isExit;
+
+db.ref('/PDD_bot/'+ last_word +'/').once("value")
+  .then(function(snapshot) {
+    if(true == snapshot.child(input_word).exists()){
+      isExit = "YES";
+    }else{
+      isExit = "NO";
+    }
+  });
+
+if (isExit == "NO") { //{}はパスのワイルドカード。適当な値でもOK。
   var headers = {
     'Content-Type':'application/json'
   };
@@ -67,7 +78,7 @@ f ('/PDD_hum/{pushId}/' + input_word) { //{}はパスのワイルドカード。
     //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
     //console.log('body:', body); // Print the HTML for the Google homepage.
   });
-}*/
+}
 /////////////////////////////////
 
 
