@@ -21,65 +21,44 @@
         delay: 1500,  //メッセージの表示タイミングをずらす
         content: 'しりとりしましょう'
       }).then(function() {
+          botui.message.bot({
+              delay: 500,
+              content: 'はじめは「しりとり」の「り」です'
+          })
   
         //キーワードの入力
         //「return」を記述して、ユーザーからの入力待ち状態にする
         return botui.action.text({
           delay: 1000,
           action: {
-            placeholder: 'ふかかい'
+            placeholder: 'り'
           }
         });
       }).then(function(res) {
   
         //入力されたキーワードを取得する
-        key = res.value;
-        word_chain(key);
+        curword = res.value;
+        checkinput(curword, 'り');        
 
       });
     }
 
-    //入力された語の最後の一文字を表示するだけ(独り言の最後の一文字を返してくれる)
-    function word_chain1(keyword) {
-        console.log("in: word_chain w/" + keyword);
-        preend = getEndcharactor(keyword);
-
-        botui.message.bot({
-            content: preend
-        }).then(function() {
-            //返信
-            return botui.action.text(
-            {
-                delay: 1000,
-                action: {
-                    placeholder: preend
-                }
-            }
-            );
-            
-        }).then(function(res){
-            curword = res.value;
-            console.log(key + "が入力されました");
-            word_chain(curword);
-        });
-    }
     //入力された語がしりとりとして成立しているかを判別し、繰り返し入力を促すver.
-    function word_chain(keyword) {
-        console.log("in: word_chain w/" + keyword);
-        preend = getEndcharactor(keyword);
-
+        //小文字を処理するようにする(日本語の小文字大文字を変換する機能はない)
+    function word_chain(curword) {
+        console.log("in: word_chain w/" + curword);
+        preend = curword.slice(-1);
+        /*ここで西田の作ったプログラムを呼んで返答を取得 */
+        
         botui.message.bot({
             content: preend
         }).then(function() {
-            //返信
-            return botui.action.text(
-            {
-                delay: 1000,
+            return botui.action.text({
+                delay: 500,
                 action: {
                     placeholder: preend
                 }
-            }
-            );
+            });
             
         }).then(function(res){
             curword = res.value;
@@ -89,25 +68,9 @@
         });
     }
 
-    function getuserinput(preend){
-        return botui.action.text({
-            delay: 1500,
-            action: {
-            placeholder: preend
-            }
-        }).then(function(res) {
-            curword = res.value;
-            console.log("getuserinput:" + curword);
-            return curword;
-        });
-    }
-
-    function getEndcharactor(keyword) {
-        var endchar = keyword.slice(-1);
-        return endchar;
-    }
     
     //入力をチェックし、入力に応じたメッセージの表示, 入力に応じた引数でword_chainを呼び出す
+
     function checkinput(curword, preend){
         console.log("in: checkinput");
         var curhead = curword.slice(0,1);
@@ -122,6 +85,7 @@
         }else {
             collectness = true;
         }
+
 
         if(collectness === false){
             console.log("checkinput: false");
@@ -154,8 +118,14 @@
     //プログラムを終了する処理
     function end() {
       botui.message.bot({
-        content: 'YOU LOSE\n俺の勝ち\nなんで負けたか、明日まで考えといてください\nほないただきます'
-      })
+        content: 'YOU LOSE\n俺の勝ち\nなんで負けたか、明日まで考えといてください'
+        
+      }).then(function(){
+          botui.message.bot({
+            content: 'ほないただきます'
+          })
+
+      });
     }
   
   })();
