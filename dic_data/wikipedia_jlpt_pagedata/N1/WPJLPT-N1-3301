@@ -1,0 +1,4238 @@
+<!DOCTYPE html>
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Wikipedia JLPT Vocab - Kanshudo</title>
+  <meta charset="UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"23e93f0784","applicationID":"5958078","transactionName":"dlZaRhEKW10AR0sFC1lVUVEXDFhfFhoTDw9cSVFWCgRoWwlFEA==","queueTime":4,"applicationTime":479,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use Kanshudo to study Japanese vocab graded by JLPT level.">
+  <meta name="keywords" content="learn kanji,learn japanese kanji,learn japanese kanji online,learn japanese,learn written japanese,written japanese,mastery japanese,master kanji,master japanese kanji,easy way to learn japanese kanji,learn japan language,how to learn kanji,japan language,learn japanese online free,learning japanese kanji online" />
+  
+  <link href="/assets/application-a6245c33c35d6b62819a4ec0616bdefaff178dd5371a67dac2137eeb044afd72.css" media="all" rel="stylesheet" />
+  <link href="/assets/kanshudo-font-a3c92d5121e810b12517d3977f01170a3cd33e4b0b1698f1729baf84abf5ea7f.css" media="all" rel="stylesheet" />
+  <script src="/assets/application-dd00b59d43e4edfd303c90488c9eb66a6a543463ac8c1f79ad039a0284eaa23c.js"></script>
+  <script src="/assets/modernizr-48e00d85f0bec87fb1d774b045bc11e640531774919b32c7923ac2fa33f41025.js"></script>
+  <script src="/assets/snap.svg-min-393963ef0e7219ebb3f122e1d54fb5003bbe6e0a1cec27bb137ae4b37a490235.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="I0tzWJYQvDPTqPJRd3zjs8Ujk6rtwS35L3bXia/RF/U=" name="csrf-token" />
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Kanshudo search" />
+  <link rel=”apple-touch-icon” href=”/apple-touch-icon.png”/>
+  <link rel=”apple-touch-icon-precomposed” href=”/apple-touch-icon.png”/>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <script>
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq)return;
+          n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq)f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1682588172002917');
+        fbq('track', "PageView");</script>
+      <noscript><img height="1" width="1" style="display:none"
+                     src="https://www.facebook.com/tr?id=1682588172002917&ev=PageView&noscript=1"
+      /></noscript>
+
+</head>
+<body class="nav-is-fixed">
+
+    <!-- Google Tag Manager -->
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T4DW2V"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+          '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T4DW2V');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+<div class="cd-overlay"></div>
+
+<header class="cd-main-header nav-is-fixed">
+  <a class="cd-logo" href="/dashboard">
+    <img alt="Kanshudo" border="0" src="/assets/kanshudo-logo_merged-82b496e1e6728ab09454252862ab902719da6e3fc3344051f7b4aabf66c0ee37.png" width="40" />
+    <div class="cd-logo-text">Kanshudo</div>
+  </a>
+
+  <div class="cd-header-buttons-new" id="cd-header-buttons">
+
+
+    <div class="cd-nav-trigger-div"><a class="cd-dashboard-trigger side" style="color: #b3567f" href="/dashboard"><span class='ja-jm'></span></a></div>
+
+    <div><a class="cd-search-trigger" href="#cd-search"><span></span></a></div>
+
+    <div class="cd-nav-trigger-div"><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></div>
+  </div>
+
+</header>
+
+<nav class="cd-nav">
+  <ul id="cd-primary-nav" class="cd-primary-nav is-fixed adjust">
+
+
+    <li class="li-dash-trigger"><a title="Dashboard" id="li-a-d" href="/dashboard"><span class='ja-jm'></span></a></li>
+
+    <li class="has-children">
+      <a href="/dashboard" class="mastery">MASTERY</a>
+
+      <ul class="cd-nav-icons is-hidden mastery adjust">
+        <li class="go-back"><a href="#0">Menu</a></li>
+
+        <li>
+          <a class="cd-nav-item mastery" href="/kanjimastery">
+            <div class="nnli">
+              <div class="nnli-icon mastery"><span class='ja-circles_kanji'></span></div>
+              <div>
+                <h3 class="mastery">My kanji mastery</h3>
+                <div class="nnli-text">View your knowledge of kanji and kana.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item mastery" href="/words/mastery">
+            <div class="nnli">
+              <div class="nnli-icon mastery"><span class='ja-circles_words'></span></div>
+              <div>
+                <h3 class="mastery">My word mastery</h3>
+                <div class="nnli-text">View your knowledge of Japanese vocabulary.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item mastery" href="/grammar/mastery?ufn=current">
+            <div class="nnli">
+              <div class="nnli-icon mastery"><span class='ja-circles_grammar'></span></div>
+              <div>
+                <h3 class="mastery">My grammar mastery</h3>
+                <div class="nnli-text">View your knowledge of Japanese grammar.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item mastery" href="/mastery">
+            <div class="nnli">
+              <div class="nnli-icon mastery"><span class='ja-japan_map_icon'></span></div>
+              <div>
+                <h3 class="mastery">My mastery map</h3>
+                <div class="nnli-text">Visualize your overall progress with Japanese.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item mastery" href="/studypoints">
+            <div class="nnli">
+              <div class="nnli-icon mastery"><span class='ja-stats-bars'></span></div>
+              <div>
+                <h3 class="mastery">My study points</h3>
+                <div class="nnli-text">View study points you've earned, and view your study history.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <li class="has-children">
+      <a href="/study" class="study">STUDY</a>
+
+      <ul class="cd-nav-icons is-hidden study adjust">
+        <li class="go-back"><a href="#0">Menu</a></li>
+
+        <li>
+          <a class="cd-nav-item study" href="/srs">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-flashcards'></span></div>
+              <div>
+                <h3 class="study">Flashcards</h3>
+                <div class="nnli-text">Study, review, create and import flashcards.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item study" href="/srs/createquick">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-bolt'></span></div>
+              <div>
+                <h3 class="study">Quick Study / Test</h3>
+                <div class="nnli-text">Quickly study kanji, kana, words or grammar - or test your current knowledge.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item study" href="/draw">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-pen'></span></div>
+              <div>
+                <h3 class="study">Drawing Practice</h3>
+                <div class="nnli-text">Practice drawing hiragana, katakana and the most common kanji components.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+          <li>
+            <a class="cd-nav-item study" href="/beginnerlessons">
+              <div class="nnli">
+                <div class="nnli-icon study"><span class='ja-board_bl'></span></div>
+                <div>
+                  <h3 class="study">Beginner Lessons</h3>
+                  <div class="nnli-text">Lessons for absolute beginners. Zero to 100 kanji, plus grammar & vocab.</div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a class="cd-nav-item study" href="/mylessons">
+              <div class="nnli">
+                <div class="nnli-icon study"><span class='ja-board_il'></span></div>
+                <div>
+                  <h3 class="study">Intermediate Lessons</h3>
+                  <div class="nnli-text">Graded lessons from zero to 1000 kanji, plus vocab.</div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a class="cd-nav-item study" href="/tcompanion">
+              <div class="nnli">
+                <div class="nnli-icon study"><span class='ja-board_tc'></span></div>
+                <div>
+                  <h3 class="study">Textbook Companion</h3>
+                  <div class="nnli-text">Use Kanshudo with your favorite textbook.</div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+        <li>
+          <a class="cd-nav-item study" href="/grammar">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-grammar'></span></div>
+              <div>
+                <h3 class="study">Grammar</h3>
+                <div class="nnli-text">A comprehensive reference guide to Japanese grammar.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item study" href="/read">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-open-book'></span></div>
+              <div>
+                <h3 class="study">Reading Corner</h3>
+                <div class="nnli-text">Read real Japanese essays and texts.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item study" href="/favorites">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-star'></span></div>
+              <div>
+                <h3 class="study">My Favorites</h3>
+                <div class="nnli-text">View tagged kanji, words, examples and grammar points.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item study" href="/collections">
+            <div class="nnli">
+              <div class="nnli-icon study"><span class='ja-collections'></span></div>
+              <div>
+                <h3 class="study">Collections</h3>
+                <div class="nnli-text">Kanji, words and names grouped in various ways for easy access.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <li class="has-children">
+      <a href="/play" class="play">PLAY</a>
+      <ul class="cd-nav-icons is-hidden adjust">
+        <li class="go-back"><a href="#0">Menu</a></li>
+
+        <li>
+          <a class="cd-nav-item play" href="/challenge">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-challenge'></span></div>
+              <div>
+                <h3 class="play">Kanji Challenge</h3>
+                <div class="nnli-text">The most effective way to study a kanji, with key words and examples.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item play" href="/quiz">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-quiz_kanji'></span></div>
+              <div>
+                <h3 class="play">Kanji Quiz</h3>
+                <div class="nnli-text">Take the Kanji Quiz to assess your level.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item play" href="/kanjimatch_first">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-kanji_match_icon'></span></div>
+              <div>
+                <h3 class="play">Kanji Match</h3>
+                <div class="nnli-text">Match kanji with their correct meanings.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item play" href="/play/kanjibuilder/r">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-kanji_builder'></span></div>
+              <div>
+                <h3 class="play">Kanji Builder</h3>
+                <div class="nnli-text">Build kanji from their components.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item play" href="/wordquiz">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-quiz_words'></span></div>
+              <div>
+                <h3 class="play">Word Quiz</h3>
+                <div class="nnli-text">Take the Word Quiz to build or test your vocabulary.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item play" href="/wordmatch_first">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-word_match_icon'></span></div>
+              <div>
+                <h3 class="play">Word Match</h3>
+                <div class="nnli-text">Match words with their correct meanings.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="cd-nav-item play" href="/play/sentencecomplete_first">
+            <div class="nnli">
+              <div class="nnli-icon play"><span class='ja-sentence_complete_icon'></span></div>
+              <div>
+                <h3 class="play">Sentence Complete</h3>
+                <div class="nnli-text">Drag kanji to their correct places to complete sentences.</div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+      <li>
+        <a href="/login" class="account">LOG IN</a>
+      </li>
+
+  </ul> <!-- primary-nav -->
+</nav> <!-- cd-nav -->
+
+<div id="cd-search" class="cd-search">
+  <div id="appCbShow" class="cbappshowdiv">
+    <div class="cbsh">部</div>
+  </div>
+  <input id="cd-quicksearch" type="search" placeholder="Quick Search: Kanji, Japanese, English ...">
+  <button id="qsearchbutton" class="searchbutton">Search</button>
+
+  <div id="cd-search-showmore">
+    <div id="cd-search-more-mess">More search options <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+    <div id="cd-search-more">
+      <div id="content">
+          <div><a href="/search">Kanji search</a></div>
+          <div><a href="/searchw">Word search</a></div>
+          <div><a href="/searchn">Name search</a></div>
+          <div><a href="/searcht">Example search</a></div>
+          <div><a href="/sentence_analyze">Sentence translate</a></div>
+          <div><a href="/grammar">Grammar search</a></div>
+          <div><a href="/searchsite">Site search</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main cd-main-content">
+
+  <link href="/assets/locator-685e0da4078cf00182207ea8c6d7b2e150ff9a7e95658678a8596b92d6f32000.css" media="screen" rel="stylesheet" />
+
+
+
+<div class="locator study">
+  <div><a class="study " href="/study">STUDY</a></div>
+    <i class="fa fa-angle-right"></i>
+    <div><a class="study " href="/collections"><span class='loc_hide_medium'>COLLECTIONS</span><span class='loc_show_medium'>COLL.</span></a></div>
+      <i class="fa fa-angle-right"></i>
+      <div><a class="study " href="/collections/wikipedia_jlpt">JLPT VOCAB</a></div>
+      <i class="fa fa-angle-right"></i>
+      <div><a class="study sel" href=""><span class='loc_hide_medium'>WPJLPT-N1-3301</span><span class='loc_show_medium'>N1-3301</span></a></div>
+</div>
+
+
+  
+
+  <div id="flashcontent">
+  </div>
+
+  
+<link href="/assets/collections-1948853fffd5d75453c23da689fcccd585d349e797aa1a2cd440f4ee0ea846d8.css" media="screen" rel="stylesheet" />
+
+<style>
+  table {
+    margin: 20px;
+  }
+
+  td {
+    width: 40px;
+    text-align: center;
+  }
+
+  sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+  }
+</style>
+
+
+<div class="bodyarea">
+
+  <h1>Japanese vocabulary organized by JLPT level</h1>
+
+  <div class="bodysection">
+
+    
+
+<script>
+    var compressed = false;
+    var height;
+    $(document).ready(function () {
+        $('#introheader').hide();
+        $('#introtext').html($('#intro').html());
+        $('#x-compress').click(function () {
+            compress(true)
+        });
+        compress(true);
+    });
+
+    function compress(animate) {
+        if (compressed) {
+            $('#x-compress').removeClass('rotated').addClass('notrotated');
+            $('#intronote').css('overflow', 'auto').animate({height: height}, 500);
+            $('#introtext').fadeIn();
+            compressed = false;
+        }
+        else {
+            $('#intronote').css('overflow', 'hidden');
+            height = $('#intronote').outerHeight();
+            $('#x-compress').removeClass('notrotated').addClass('rotated');
+            if (animate) {
+                $('#introtext').fadeOut();
+                $('#intronote').animate({height: '42px'}, 500);
+            } else {
+                $('#introtext').hide();
+                $('#intronote').outerHeight('42px');
+            }
+            compressed = true;
+        }
+    }
+</script>
+
+<div id="introparent">
+  <div id="intronote">
+    <div id="introheader"></div>
+      <a id="x-compress" rotated><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <div id="introtext"></div>
+  </div>
+</div>
+
+    <div id="intro" style="display:none;">
+
+      <div>Arguably the most important component of Japanese proficiency is vocabulary. Building your vocab will help you
+        understand more, which will let you get more from what you read and listen to, and
+        help you engage in more situations where you can communicate, which
+        creates a virtuous circle of improvement.</div>
+
+      <div class="spaced">The 84 collections here
+        introduce a total of  of the most commonly used words in Japanese.
+      The collections are organized into five groups corresponding to the 5 levels of the
+        JLPT (Japanese Language Proficiency Test / 日本語能力試験 / にほんごのうりょくしけん / Nihongo Nōryoku Shiken),
+        easiest (N5) first. Within each group, the words are prioritized by usefulness, and further
+      divided into sets of 100 for ease of study.</div>
+
+      <div class="spaced">The set of words for each group comes from the
+        Wikipedia JLPT vocab lists<sup><a href="#ref1">[1]</a></sup>. By analogy with studies of vocabulary size for
+        English as a foreign language, if you gain a thorough knowledge of the words in these
+      collections, you will be able to understand 99% of what you will encounter in Japanese<sup><a href="#ref2">[2]</a></sup>.</div>
+
+      <div class="spaced">For each collection, you can
+        automatically create <a href="/srs">Flashcards</a> to study on your computer or smartphone, download
+        for use elsewhere, add the items to your <a href="/favorites">Favorites</a>,
+        or just use them for <a href="/quick">Quick Study</a>.
+      </div>
+
+      <div class="spaced" style="font-size:smaller;">References:
+        <ul>
+          <li><a name="ref1"></a>1. <a href="https://en.wiktionary.org/wiki/Appendix:JLPT" target="_blank">JLPT vocabulary lists (Wikipedia) ⇗</a>
+          </li>
+          <li><a name="ref2"></a>2. <a href="https://en.wikipedia.org/wiki/Vocabulary#Foreign-language_vocabulary" target="_blank">Foreign-language vocabulary size (Wikipedia)</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+        <div class="bodypara1"><a href="/collections/wikipedia_jlpt">◄ BACK TO INDEX</a></div>
+
+        <h4>Wikipedia JLPT N1 Vocab 3301-3363</h4>
+        <div class="spaced keymessage">This collection contains 63 words.</div>
+
+        <div class="spaced">
+          <div id="quickstudy_848" class="action linkdiv">QUICK STUDY</div>
+          <script>
+              $(document).ready(function () {
+                  $('#quickstudy_848').click(function () {
+                      show_quick();
+                  });
+              });
+          </script>
+              <div id="flashcards_848" class="action linkdiv">FLASHCARDS</div>
+              <script>
+                  $(document).ready(function () {
+                      $('#flashcards_848').click(function () {
+                          show_flashcards();
+                      });
+                  });
+              </script>
+          <div id="download_848" class="action linkdiv">DOWNLOAD</div>
+          <script>
+              $(document).ready(function () {
+                  $('#download_848').click(function () {
+                      show_download();
+                  });
+              });
+          </script>
+        </div>
+
+        <div class="spaced">
+          
+<link href="/assets/jukugo-a7f2e035e8224c4687ad76003ef15dee027f1cb5341e858c16a64a5b6846c5bf.css" media="screen" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139191">
+                    <a id="jk_139191" onclick="wordDetails(139191, '');"><span class='f_container' id='jk_jk_139191_fc'><div class='furigana' id='jk_jk_139191_f'>さぞ</div><div class='f_kanji' id='jk_jk_139191_fk'>嘸</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139191">
+                <div id="jk_abbr_139191">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div>I am sure; certainly; no doubt&nbsp;&nbsp;<span>(see also: <a href='/searchq?q=%E5%98%B8%E3%81%8B%E3%81%97'>嘸かし</a>, <a href='/searchq?q=%E5%98%B8%E3%82%84'>嘸や</a>; often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139191" onclick="speakJapanese('さぞ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139191" onclick="jlptClicked(139191,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139191" onclick="ufnClicked('嘸',9)" class="ufn_container">
+      <div id="ufn_o139191" class="ufn_outer"><div id="ufn_i139191" class="ufn_inner">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139191">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_274190">
+                    <a id="jk_274190" onclick="wordDetails(274190, '');"><span class='f_container' id='jk_jk_274190_fc'><div class='furigana' id='jk_jk_274190_f'>つぶ</div><div class='f_kanji' id='jk_jk_274190_fk'>瞑</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_274190">
+                <div id="jk_abbr_274190">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, transitive verb</span></div>to close (eyes); to shut&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 reading and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio274190" onclick="speakJapanese('つぶる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_274190" onclick="jlptClicked(274190,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_274190" onclick="ufnClicked('瞑る',6)" class="ufn_container">
+      <div id="ufn_o274190" class="ufn_outer"><div id="ufn_i274190" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_274190">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_258438">
+                    <a id="jk_258438" onclick="wordDetails(258438, '');"><span class='f_container' id='jk_jk_258438_fc'><div class='furigana' id='jk_jk_258438_f'>し</div><div class='f_kanji' id='jk_jk_258438_fk'>泌</div></span>み<span class='f_container' id='jk_jk_258438_fc'><div class='furigana' id='jk_jk_258438_f'>じ</div><div class='f_kanji' id='jk_jk_258438_fk'>泌</div></span>み</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_258438">
+                <div id="jk_abbr_258438">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>'to' adverb</a>, <a href='/grammar/id/546'>adverb</a></span></div><span class='vm_id'>1. </span>earnestly; keenly; fully; deeply; heartily; seriously&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>calmly</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio258438" onclick="speakJapanese('しみじみ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_258438" onclick="jlptClicked(258438,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_258438">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_140080">
+                    <a id="jk_140080" onclick="wordDetails(140080, '');"><span class='f_container' id='jk_jk_140080_fc'><div class='furigana' id='jk_jk_140080_f'>いびき</div><div class='f_kanji' id='jk_jk_140080_fk'>鼾</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_140080">
+                <div id="jk_abbr_140080">
+                      <div class='vm'><div><span>noun</span></div>snoring; snore&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio140080" onclick="speakJapanese('いびき')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_140080" onclick="jlptClicked(140080,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_140080" onclick="ufnClicked('鼾',6)" class="ufn_container">
+      <div id="ufn_o140080" class="ufn_outer"><div id="ufn_i140080" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_140080">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_272978">
+                    <a id="jk_272978" onclick="wordDetails(272978, '');"><span class='f_container' id='jk_jk_272978_fc'><div class='furigana' id='jk_jk_272978_f'>あぶ</div><div class='f_kanji' id='jk_jk_272978_fk'>炙</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_272978">
+                <div id="jk_abbr_272978">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to warm (e.g. one's hands over a fire); to dry&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to scorch; to broil; to toast; to grill</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio272978" onclick="speakJapanese('あぶる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_272978" onclick="jlptClicked(272978,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_272978" onclick="ufnClicked('炙る',7)" class="ufn_container">
+      <div id="ufn_o272978" class="ufn_outer"><div id="ufn_i272978" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_272978">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_273294">
+                    <a id="jk_273294" onclick="wordDetails(273294, '');"><span class='f_container' id='jk_jk_273294_fc'><div class='furigana' id='jk_jk_273294_f'>ぼろ</div><div class='f_kanji' id='jk_jk_273294_fk'>藍褸</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_273294">
+                <div id="jk_abbr_273294">
+                      <div class='vm'><div><span>noun, prefix</span></div><span class='vm_id'>1. </span>rag; scrap; tattered clothes&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>fault (esp. in a pretense, pretence); defect&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 meaning and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio273294" onclick="speakJapanese('ぼろ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_273294" onclick="jlptClicked(273294,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_273294" onclick="ufnClicked('藍褸',7)" class="ufn_container">
+      <div id="ufn_o273294" class="ufn_outer"><div id="ufn_i273294" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_273294">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_326769">
+                    <a id="jk_326769" onclick="wordDetails(326769, '');"><span class='f_container' id='jk_jk_326769_fc'><div class='furigana' id='jk_jk_326769_f'>ふざけ</div><div class='f_kanji' id='jk_jk_326769_fk'>不山戯</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_326769">
+                <div id="jk_abbr_326769">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to joke; to jest; to kid; to josh&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to make fun of; to laugh at; to play a prank&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 meanings and 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio326769" onclick="speakJapanese('ふざける')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_326769" onclick="jlptClicked(326769,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_326769" onclick="ufnClicked('不山戯る',5)" class="ufn_container">
+      <div id="ufn_o326769" class="ufn_outer"><div id="ufn_i326769" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_326769">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_259634">
+                    <a id="jk_259634" onclick="wordDetails(259634, '');"><span class='f_container' id='jk_jk_259634_fc'><div class='furigana' id='jk_jk_259634_f'>ひ</div><div class='f_kanji' id='jk_jk_259634_fk'>引</div></span>っ<span class='f_container' id='jk_jk_259634_fc'><div class='furigana' id='jk_jk_259634_f'>か</div><div class='f_kanji' id='jk_jk_259634_fk'>掻</div></span>く</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_259634">
+                <div id="jk_abbr_259634">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ku' godan verb</a>, transitive verb</span></div>to scratch; to claw</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio259634" onclick="speakJapanese('ひっかく')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_259634" onclick="jlptClicked(259634,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_259634">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_264019">
+                    <a id="jk_264019" onclick="wordDetails(264019, '');"><span class='f_container' id='jk_jk_264019_fc'><div class='furigana' id='jk_jk_264019_f'>す</div><div class='f_kanji' id='jk_jk_264019_fk'>擦</div></span>れ<span class='f_container' id='jk_jk_264019_fc'><div class='furigana' id='jk_jk_264019_f'>ちが</div><div class='f_kanji' id='jk_jk_264019_fk'>違</div></span>い</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_264019">
+                <div id="jk_abbr_264019">
+                      <div class='vm'><div><span>noun</span></div>passing each other; crossing paths without meeting; being at cross purposes</div>
+
+                      <div class="ent_item">(click the word to view an additional 1 form)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio264019" onclick="speakJapanese('すれちがい')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_264019" onclick="jlptClicked(264019,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_264019">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_265082">
+                    <a id="jk_265082" onclick="wordDetails(265082, '');"><span class='f_container' id='jk_jk_265082_fc'><div class='furigana' id='jk_jk_265082_f'>てはず</div><div class='f_kanji' id='jk_jk_265082_fk'>手筈</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_265082">
+                <div id="jk_abbr_265082">
+                      <div class='vm'><div><span>noun</span></div>arrangement; plan; programme; program</div>
+
+                      <div class="ent_item">(click the word to view an additional 1 form)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio265082" onclick="speakJapanese('てはず')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_265082" onclick="jlptClicked(265082,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_265082">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139654">
+                    <a id="jk_139654" onclick="wordDetails(139654, '');"><span class='f_container' id='jk_jk_139654_fc'><div class='furigana' id='jk_jk_139654_f'>そび</div><div class='f_kanji' id='jk_jk_139654_fk'>聳</div></span>える</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139654">
+                <div id="jk_abbr_139654">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div>to rise; to tower; to soar&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139654" onclick="speakJapanese('そびえる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139654" onclick="jlptClicked(139654,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139654" onclick="ufnClicked('聳える',6)" class="ufn_container">
+      <div id="ufn_o139654" class="ufn_outer"><div id="ufn_i139654" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139654">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_272991">
+                    <a id="jk_272991" onclick="wordDetails(272991, '');"><span class='f_container' id='jk_jk_272991_fc'><div class='furigana' id='jk_jk_272991_f'>こうこう</div><div class='f_kanji' id='jk_jk_272991_fk'>煌々</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_272991">
+                <div id="jk_abbr_272991">
+                      <div class='vm'><div><span><a href='/grammar/id/661'>'taru' adjective</a>, <a href='/grammar/id/546'>'to' adverb</a></span></div>brilliant; dazzling; light; bright</div>
+
+                      <div class="ent_item">(click the word to view an additional 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio272991" onclick="speakJapanese('こうこう')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_272991" onclick="jlptClicked(272991,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_272991">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_85727">
+                    <a id="jk_85727" onclick="wordDetails(85727, '');"><span class='f_container' id='jk_jk_85727_fc'><div class='furigana' id='jk_jk_85727_f'>ちっ</div><div class='f_kanji' id='jk_jk_85727_fk'>些</div></span>とも</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_85727">
+                <div id="jk_abbr_85727">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div>not at all (neg. verb)&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio85727" onclick="speakJapanese('ちっとも')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_85727" onclick="jlptClicked(85727,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_85727" onclick="ufnClicked('些とも',6)" class="ufn_container">
+      <div id="ufn_o85727" class="ufn_outer"><div id="ufn_i85727" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_85727">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139139">
+                    <a id="jk_139139" onclick="wordDetails(139139, '');"><span class='f_container' id='jk_jk_139139_fc'><div class='furigana' id='jk_jk_139139_f'>とが</div><div class='f_kanji' id='jk_jk_139139_fk'>咎</div></span>める</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139139">
+                <div id="jk_abbr_139139">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to blame; to reproach; to censure; to rebuke; to reprove; to find fault; to take to task; to criticize; to criticise&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to question (a suspect); to challenge&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 meanings)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139139" onclick="speakJapanese('とがめる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139139" onclick="jlptClicked(139139,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139139" onclick="ufnClicked('咎める',9)" class="ufn_container">
+      <div id="ufn_o139139" class="ufn_outer_mu"><div id="ufn_i139139" class="ufn_inner_mu">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139139">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_274603">
+                    <a id="jk_274603" onclick="wordDetails(274603, '');"><span class='f_container' id='jk_jk_274603_fc'><div class='furigana' id='jk_jk_274603_f'>いやいや</div><div class='f_kanji' id='jk_jk_274603_fk'>厭々</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_274603">
+                <div id="jk_abbr_274603">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div><span class='vm_id'>1. </span>unwillingly; grudgingly; reluctantly&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><div><span>noun</span></div><span class='vm_id'>2. </span>shaking head in refusal (to children)&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 meaning and 4 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio274603" onclick="speakJapanese('いやいや')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_274603" onclick="jlptClicked(274603,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_274603" onclick="ufnClicked('厭々',9)" class="ufn_container">
+      <div id="ufn_o274603" class="ufn_outer"><div id="ufn_i274603" class="ufn_inner">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_274603">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139898">
+                    <a id="jk_139898" onclick="wordDetails(139898, '');"><span class='f_container' id='jk_jk_139898_fc'><div class='furigana' id='jk_jk_139898_f'>つまず</div><div class='f_kanji' id='jk_jk_139898_fk'>躓</div></span>く</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139898">
+                <div id="jk_abbr_139898">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ku' godan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to stumble; to trip&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to fail&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 reading)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139898" onclick="speakJapanese('つまずく')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139898" onclick="jlptClicked(139898,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139898" onclick="ufnClicked('躓く',5)" class="ufn_container">
+      <div id="ufn_o139898" class="ufn_outer"><div id="ufn_i139898" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139898">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139336">
+                    <a id="jk_139336" onclick="wordDetails(139336, '');"><span class='f_container' id='jk_jk_139336_fc'><div class='furigana' id='jk_jk_139336_f'>つね</div><div class='f_kanji' id='jk_jk_139336_fk'>抓</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139336">
+                <div id="jk_abbr_139336">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, transitive verb</span></div>to pinch&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139336" onclick="speakJapanese('つねる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139336" onclick="jlptClicked(139336,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139336">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_327095">
+                    <a id="jk_327095" onclick="wordDetails(327095, '');"><span class='f_container' id='jk_jk_327095_fc'><div class='furigana' id='jk_jk_327095_f'>さら</div><div class='f_kanji' id='jk_jk_327095_fk'>拐</div></span>う</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_327095">
+                <div id="jk_abbr_327095">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'u' godan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to carry off; to bear off; to bear away; to take away; to run away with; to kidnap; to abduct; to nobble; to snatch&nbsp;&nbsp;<span>(also written as 浚う; often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to monopolize; to make one's own&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio327095" onclick="speakJapanese('さらう')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_327095" onclick="jlptClicked(327095,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_327095">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_264550">
+                    <a id="jk_264550" onclick="wordDetails(264550, '');"><span class='f_container' id='jk_jk_264550_fc'><div class='furigana' id='jk_jk_264550_f'>たまわ</div><div class='f_kanji' id='jk_jk_264550_fk'>賜</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_264550">
+                <div id="jk_abbr_264550">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to be given; to be granted; to be honored with; to be honoured with&nbsp;&nbsp;<span>(humble)</span></div><div class='vm'><span class='vm_id'>2. </span>to give; to bestow; to confer; to honor; to honour&nbsp;&nbsp;<span>(honorific)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio264550" onclick="speakJapanese('たまわる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_264550" onclick="jlptClicked(264550,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_264550" onclick="ufnClicked('賜る',7)" class="ufn_container">
+      <div id="ufn_o264550" class="ufn_outer_mu"><div id="ufn_i264550" class="ufn_inner_mu">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_264550">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_277451">
+                    <a id="jk_277451" onclick="wordDetails(277451, '');"><span class='f_container' id='jk_jk_277451_fc'><div class='furigana' id='jk_jk_277451_f'>とろ</div><div class='f_kanji' id='jk_jk_277451_fk'>蕩</div></span>ける</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_277451">
+                <div id="jk_abbr_277451">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to melt (to a liquid)&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to be enchanted with; to be charmed; to be bewitched&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 form)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio277451" onclick="speakJapanese('とろける')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_277451" onclick="jlptClicked(277451,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_277451">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_115458">
+                    <a id="jk_115458" onclick="wordDetails(115458, '');"><span class='f_container' id='jk_jk_115458_fc'><div class='furigana' id='jk_jk_115458_f'>と</div><div class='f_kanji' id='jk_jk_115458_fk'>疾</div></span>っくに</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_115458">
+                <div id="jk_abbr_115458">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div>long ago; already; a long time ago&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio115458" onclick="speakJapanese('とっくに')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_115458" onclick="jlptClicked(115458,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_115458" onclick="ufnClicked('疾っくに',5)" class="ufn_container">
+      <div id="ufn_o115458" class="ufn_outer"><div id="ufn_i115458" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_115458">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_258315">
+                    <a id="jk_258315" onclick="wordDetails(258315, '');"><span class='f_container' id='jk_jk_258315_fc'><div class='furigana' id='jk_jk_258315_f'>くさめ</div><div class='f_kanji' id='jk_jk_258315_fk'>嚏</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_258315">
+                <div id="jk_abbr_258315">
+                      <div class='vm'><div><span>noun</span></div><span class='vm_id'>1. </span>sneeze&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><div><span>expression</span></div><span class='vm_id'>2. </span>spoken twice in response to someone sneezing as a charm against an early death&nbsp;&nbsp;<span>(idiomatic expression; often written with kana only)</span><div class='halfspacedafter'><span>this meaning is restricted to reading くさめ</span></div></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 readings and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio258315" onclick="speakJapanese('くさめ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_258315" onclick="jlptClicked(258315,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_258315">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_266588">
+                    <a id="jk_266588" onclick="wordDetails(266588, '');"><span class='f_container' id='jk_jk_266588_fc'><div class='furigana' id='jk_jk_266588_f'>かさば</div><div class='f_kanji' id='jk_jk_266588_fk'>嵩張</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_266588">
+                <div id="jk_abbr_266588">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, intransitive verb</span></div>to be bulky; to be unwieldy; to grow voluminous&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio266588" onclick="speakJapanese('かさばる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_266588" onclick="jlptClicked(266588,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_266588" onclick="ufnClicked('嵩張る',8)" class="ufn_container">
+      <div id="ufn_o266588" class="ufn_outer"><div id="ufn_i266588" class="ufn_inner">8</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_266588">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_85533">
+                    <a id="jk_85533" onclick="wordDetails(85533, '');"><span class='f_container' id='jk_jk_85533_fc'><div class='furigana' id='jk_jk_85533_f'>しき</div><div class='f_kanji' id='jk_jk_85533_fk'>頻</div></span>りに</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_85533">
+                <div id="jk_abbr_85533">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div><span class='vm_id'>1. </span>frequently; repeatedly; often; incessantly; constantly&nbsp;&nbsp;<span>(see also: <a href='/searchq?q=%E9%A0%BB%E3%82%8A'>頻り</a>; often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>strongly; eagerly</div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio85533" onclick="speakJapanese('しきりに')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_85533" onclick="jlptClicked(85533,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_85533" onclick="ufnClicked('頻りに',8)" class="ufn_container">
+      <div id="ufn_o85533" class="ufn_outer"><div id="ufn_i85533" class="ufn_inner">8</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_85533">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_127150">
+                    <a id="jk_127150" onclick="wordDetails(127150, '');"><span class='f_container' id='jk_jk_127150_fc'><div class='furigana' id='jk_jk_127150_f'>まと</div><div class='f_kanji' id='jk_jk_127150_fk'>纏</div></span>まり</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_127150">
+                <div id="jk_abbr_127150">
+                      <div class='vm'><div><span>noun</span></div><span class='vm_id'>1. </span>unity; coherence; consistency; coordination&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>settlement; conclusion; completion&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio127150" onclick="speakJapanese('まとまり')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_127150" onclick="jlptClicked(127150,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_127150">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139209">
+                    <a id="jk_139209" onclick="wordDetails(139209, '');"><span class='f_container' id='jk_jk_139209_fc'><div class='furigana' id='jk_jk_139209_f'>おびただ</div><div class='f_kanji' id='jk_jk_139209_fk'>夥</div></span>しい</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139209">
+                <div id="jk_abbr_139209">
+                      <div class='vm'><div><span><a href='/grammar/id/451'>'i' adjective</a></span></div>large number; innumerable; great many; immense; vast; abundant&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139209" onclick="speakJapanese('おびただしい')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139209" onclick="jlptClicked(139209,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139209" onclick="ufnClicked('夥しい',7)" class="ufn_container">
+      <div id="ufn_o139209" class="ufn_outer"><div id="ufn_i139209" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139209">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_125020">
+                    <a id="jk_125020" onclick="wordDetails(125020, '');"><span class='f_container' id='jk_jk_125020_fc'><div class='furigana' id='jk_jk_125020_f'>ほころ</div><div class='f_kanji' id='jk_jk_125020_fk'>綻</div></span>びる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_125020">
+                <div id="jk_abbr_125020">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to come apart at the seams; to be ripped; to be torn&nbsp;&nbsp;<span>(see also: <a href='/searchq?q=%E7%B6%BB%E3%81%B6'>綻ぶ</a>; often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to begin to open; to begin to bloom&nbsp;&nbsp;<span>(see also: <a href='/searchq?q=%E7%B6%BB%E3%81%B6'>綻ぶ</a>; often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 meaning)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio125020" onclick="speakJapanese('ほころびる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_125020" onclick="jlptClicked(125020,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_125020" onclick="ufnClicked('綻びる',7)" class="ufn_container">
+      <div id="ufn_o125020" class="ufn_outer"><div id="ufn_i125020" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_125020">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_106613">
+                    <a id="jk_106613" onclick="wordDetails(106613, '');"><span class='f_container' id='jk_jk_106613_fc'><div class='furigana' id='jk_jk_106613_f'>く</div><div class='f_kanji' id='jk_jk_106613_fk'>朽</div></span>ちる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_106613">
+                <div id="jk_abbr_106613">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to rot; to decay</div><div class='vm'><span class='vm_id'>2. </span>to die in obscurity</div>
+
+                      <div class="ent_item">(click the word to view an additional 1 meaning)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio106613" onclick="speakJapanese('くちる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_106613" onclick="jlptClicked(106613,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_106613" onclick="ufnClicked('朽ちる',7)" class="ufn_container">
+      <div id="ufn_o106613" class="ufn_outer_mu"><div id="ufn_i106613" class="ufn_inner_mu">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_106613">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_273111">
+                    <a id="jk_273111" onclick="wordDetails(273111, '');"><span class='f_container' id='jk_jk_273111_fc'><div class='furigana' id='jk_jk_273111_f'>くじびき</div><div class='f_kanji' id='jk_jk_273111_fk'>籤引</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_273111">
+                <div id="jk_abbr_273111">
+                      <div class='vm'><div><span>noun, <a href='/grammar/id/420'>'suru' verb</a></span></div>lottery; drawn lot</div>
+
+                      <div class="ent_item">(click the word to view an additional 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio273111" onclick="speakJapanese('くじびき')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_273111" onclick="jlptClicked(273111,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_273111" onclick="ufnClicked('籤引',9)" class="ufn_container">
+      <div id="ufn_o273111" class="ufn_outer"><div id="ufn_i273111" class="ufn_inner">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_273111">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139198">
+                    <a id="jk_139198" onclick="wordDetails(139198, '');"><span class='f_container' id='jk_jk_139198_fc'><div class='furigana' id='jk_jk_139198_f'>さえず</div><div class='f_kanji' id='jk_jk_139198_fk'>囀</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139198">
+                <div id="jk_abbr_139198">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, intransitive verb</span></div>to sing; to chirp; to twitter&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139198" onclick="speakJapanese('さえずる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139198" onclick="jlptClicked(139198,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139198" onclick="ufnClicked('囀る',9)" class="ufn_container">
+      <div id="ufn_o139198" class="ufn_outer_mu"><div id="ufn_i139198" class="ufn_inner_mu">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139198">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_272781">
+                    <a id="jk_272781" onclick="wordDetails(272781, '');"><span class='f_container' id='jk_jk_272781_fc'><div class='furigana' id='jk_jk_272781_f'>しなや</div><div class='f_kanji' id='jk_jk_272781_fk'>嫋</div></span>か</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_272781">
+                <div id="jk_abbr_272781">
+                      <div class='vm'><div><span><a href='/grammar/id/451'>'na' adjective</a></span></div>supple; flexible; elastic&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio272781" onclick="speakJapanese('しなやか')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_272781" onclick="jlptClicked(272781,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_272781">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_274159">
+                    <a id="jk_274159" onclick="wordDetails(274159, '');"><span class='f_container' id='jk_jk_274159_fc'><div class='furigana' id='jk_jk_274159_f'>さて</div><div class='f_kanji' id='jk_jk_274159_fk'>偖</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_274159">
+                <div id="jk_abbr_274159">
+                      <div class='vm'><div><span>conjunction, interjection (kandoushi)</span></div>well; now; then&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio274159" onclick="speakJapanese('さて')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_274159" onclick="jlptClicked(274159,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_274159" onclick="ufnClicked('偖',5)" class="ufn_container">
+      <div id="ufn_o274159" class="ufn_outer"><div id="ufn_i274159" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_274159">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_120540">
+                    <a id="jk_120540" onclick="wordDetails(120540, '');"><span class='f_container' id='jk_jk_120540_fc'><div class='furigana' id='jk_jk_120540_f'>かさ</div><div class='f_kanji' id='jk_jk_120540_fk'>嵩</div></span>む</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_120540">
+                <div id="jk_abbr_120540">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'mu' godan verb</a>, intransitive verb</span></div>to pile up; to increase&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio120540" onclick="speakJapanese('かさむ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_120540" onclick="jlptClicked(120540,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_120540">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_106309">
+                    <a id="jk_106309" onclick="wordDetails(106309, '');"><span class='f_container' id='jk_jk_106309_fc'><div class='furigana' id='jk_jk_106309_f'>すく</div><div class='f_kanji' id='jk_jk_106309_fk'>掬</div></span>う</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_106309">
+                <div id="jk_abbr_106309">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'u' godan verb</a>, transitive verb</span></div>to scoop; to ladle out&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio106309" onclick="speakJapanese('すくう')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_106309" onclick="jlptClicked(106309,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_106309" onclick="ufnClicked('掬う',7)" class="ufn_container">
+      <div id="ufn_o106309" class="ufn_outer"><div id="ufn_i106309" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_106309">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_109180">
+                    <a id="jk_109180" onclick="wordDetails(109180, '');"><span class='f_container' id='jk_jk_109180_fc'><div class='furigana' id='jk_jk_109180_f'>げっぷ</div><div class='f_kanji' id='jk_jk_109180_fk'>月賦</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_109180">
+                <div id="jk_abbr_109180">
+                      <div class='vm'><div><span>noun</span></div>monthly installment (instalment); monthly payment&nbsp;&nbsp;<span>(see also: <a href='/searchq?q=%E6%9C%88%E6%89%95%E3%81%84'>月払い</a>)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio109180" onclick="speakJapanese('げっぷ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_109180" onclick="jlptClicked(109180,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_109180" onclick="ufnClicked('月賦',7)" class="ufn_container">
+      <div id="ufn_o109180" class="ufn_outer"><div id="ufn_i109180" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_109180">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_122830">
+                    <a id="jk_122830" onclick="wordDetails(122830, '');"><span class='f_container' id='jk_jk_122830_fc'><div class='furigana' id='jk_jk_122830_f'>つくろ</div><div class='f_kanji' id='jk_jk_122830_fk'>繕</div></span>う</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_122830">
+                <div id="jk_abbr_122830">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'u' godan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to mend; to patch up; to repair; to fix; to darn; to trim</div><div class='vm'><span class='vm_id'>2. </span>to fix (hair, clothes, appearance etc.); to adjust; to tidy up; to groom</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 meanings)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio122830" onclick="speakJapanese('つくろう')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_122830" onclick="jlptClicked(122830,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_122830" onclick="ufnClicked('繕う',9)" class="ufn_container">
+      <div id="ufn_o122830" class="ufn_outer_mu"><div id="ufn_i122830" class="ufn_inner_mu">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_122830">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_112331">
+                    <a id="jk_112331" onclick="wordDetails(112331, '');"><span class='f_container' id='jk_jk_112331_fc'><div class='furigana' id='jk_jk_112331_f'>たちま</div><div class='f_kanji' id='jk_jk_112331_fk'>忽</div></span>ち</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_112331">
+                <div id="jk_abbr_112331">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div>at once; in a moment; suddenly; all at once; quickly; promptly; immediately&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio112331" onclick="speakJapanese('たちまち')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_112331" onclick="jlptClicked(112331,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_112331" onclick="ufnClicked('忽ち',6)" class="ufn_container">
+      <div id="ufn_o112331" class="ufn_outer"><div id="ufn_i112331" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_112331">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_272944">
+                    <a id="jk_272944" onclick="wordDetails(272944, '');"><span class='f_container' id='jk_jk_272944_fc'><div class='furigana' id='jk_jk_272944_f'>むし</div><div class='f_kanji' id='jk_jk_272944_fk'>毟</div></span>る</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_272944">
+                <div id="jk_abbr_272944">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, transitive verb</span></div>to pluck; to pick; to tear</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio272944" onclick="speakJapanese('むしる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_272944" onclick="jlptClicked(272944,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_272944">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139340">
+                    <a id="jk_139340" onclick="wordDetails(139340, '');"><span class='f_container' id='jk_jk_139340_fc'><div class='furigana' id='jk_jk_139340_f'>こじ</div><div class='f_kanji' id='jk_jk_139340_fk'>拗</div></span>れる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139340">
+                <div id="jk_abbr_139340">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div>to get complicated; to grow worse; to turn sour&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139340" onclick="speakJapanese('こじれる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139340" onclick="jlptClicked(139340,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139340">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_136534">
+                    <a id="jk_136534" onclick="wordDetails(136534, '');"><span class='f_container' id='jk_jk_136534_fc'><div class='furigana' id='jk_jk_136534_f'>やたら</div><div class='f_kanji' id='jk_jk_136534_fk'>矢鱈</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_136534">
+                <div id="jk_abbr_136534">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a>, <a href='/grammar/id/546'>'to' adverb</a></span></div><span class='vm_id'>1. </span>indiscriminately; blindly; at random; recklessly; thoughtlessly; excessively; profusely&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><div><span><a href='/grammar/id/451'>'na' adjective</a></span></div><span class='vm_id'>2. </span>indiscriminate; random; excessive&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio136534" onclick="speakJapanese('やたら')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_136534" onclick="jlptClicked(136534,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_136534" onclick="ufnClicked('矢鱈',5)" class="ufn_container">
+      <div id="ufn_o136534" class="ufn_outer"><div id="ufn_i136534" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_136534">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_258685">
+                    <a id="jk_258685" onclick="wordDetails(258685, '');"><span class='f_container' id='jk_jk_258685_fc'><div class='furigana' id='jk_jk_258685_f'>やが</div><div class='f_kanji' id='jk_jk_258685_fk'>軈</div></span>て</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_258685">
+                <div id="jk_abbr_258685">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div><span class='vm_id'>1. </span>before long; soon&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>almost; nearly&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 meaning and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio258685" onclick="speakJapanese('やがて')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_258685" onclick="jlptClicked(258685,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_258685" onclick="ufnClicked('軈て',3)" class="ufn_container">
+      <div id="ufn_o258685" class="ufn_outer"><div id="ufn_i258685" class="ufn_inner">3</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_258685">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_273913">
+                    <a id="jk_273913" onclick="wordDetails(273913, '');"><span class='f_container' id='jk_jk_273913_fc'><div class='furigana' id='jk_jk_273913_f'>そそ</div><div class='f_kanji' id='jk_jk_273913_fk'>濯</div></span>ぐ</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_273913">
+                <div id="jk_abbr_273913">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'gu' godan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to rinse; to wash out&nbsp;&nbsp;<span>(see also: <a href='/searchq?q=%E6%BC%B1%E3%81%90'>漱ぐ</a>; esp. 濯ぐ; often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to have one's revenge; to wipe out a disgrace&nbsp;&nbsp;<span>(esp. 雪ぐ; often written with kana only)</span><div class='halfspacedafter'><span>this meaning is restricted to reading すすぐ, そそぐ</span></div></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 readings and 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio273913" onclick="speakJapanese('そそぐ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_273913" onclick="jlptClicked(273913,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_273913">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139832">
+                    <a id="jk_139832" onclick="wordDetails(139832, '');"><span class='f_container' id='jk_jk_139832_fc'><div class='furigana' id='jk_jk_139832_f'>あつら</div><div class='f_kanji' id='jk_jk_139832_fk'>誂</div></span>える</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139832">
+                <div id="jk_abbr_139832">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, transitive verb</span></div>to give an order; to place an order&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139832" onclick="speakJapanese('あつらえる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139832" onclick="jlptClicked(139832,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139832" onclick="ufnClicked('誂える',8)" class="ufn_container">
+      <div id="ufn_o139832" class="ufn_outer"><div id="ufn_i139832" class="ufn_inner">8</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139832">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_274155">
+                    <a id="jk_274155" onclick="wordDetails(274155, '');"><span class='f_container' id='jk_jk_274155_fc'><div class='furigana' id='jk_jk_274155_f'>せがれ</div><div class='f_kanji' id='jk_jk_274155_fk'>伜</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_274155">
+                <div id="jk_abbr_274155">
+                      <div class='vm'><div><span>noun</span></div><span class='vm_id'>1. </span>son&nbsp;&nbsp;<span>(humble)</span></div><div class='vm'><span class='vm_id'>2. </span>punk; brat</div>
+
+                      <div class="ent_item">(click the word to view an additional 1 meaning and 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio274155" onclick="speakJapanese('せがれ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_274155" onclick="jlptClicked(274155,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_274155">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_85294">
+                    <a id="jk_85294" onclick="wordDetails(85294, '');"><span class='f_container' id='jk_jk_85294_fc'><div class='furigana' id='jk_jk_85294_f'>かしこ</div><div class='f_kanji' id='jk_jk_85294_fk'>畏</div></span>まりました</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_85294">
+                <div id="jk_abbr_85294">
+                      <div class='vm'><div><span>expression</span></div>certainly!&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio85294" onclick="speakJapanese('かしこまりました')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_85294" onclick="jlptClicked(85294,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_85294" onclick="ufnClicked('畏まりました',6)" class="ufn_container">
+      <div id="ufn_o85294" class="ufn_outer"><div id="ufn_i85294" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_85294">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139839">
+                    <a id="jk_139839" onclick="wordDetails(139839, '');"><span class='f_container' id='jk_jk_139839_fc'><div class='furigana' id='jk_jk_139839_f'>くど</div><div class='f_kanji' id='jk_jk_139839_fk'>諄</div></span>い</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139839">
+                <div id="jk_abbr_139839">
+                      <div class='vm'><div><span><a href='/grammar/id/451'>'i' adjective</a></span></div><span class='vm_id'>1. </span>verbose; importunate; wordy; repetitious; long-winded&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>heavy (taste); rich; strong; cloying; gaudy; loud&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139839" onclick="speakJapanese('くどい')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139839" onclick="jlptClicked(139839,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139839" onclick="ufnClicked('諄い',5)" class="ufn_container">
+      <div id="ufn_o139839" class="ufn_outer"><div id="ufn_i139839" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139839">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_268425">
+                    <a id="jk_268425" onclick="wordDetails(268425, '');"><span class='f_container' id='jk_jk_268425_fc'><div class='furigana' id='jk_jk_268425_f'>しぼ</div><div class='f_kanji' id='jk_jk_268425_fk'>萎</div></span>む</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_268425">
+                <div id="jk_abbr_268425">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'mu' godan verb</a>, intransitive verb</span></div>to wither (e.g. flowers, dreams); to sag (e.g. balloon, grapes); to fade (away); to shrivel; to wilt; to deflate&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio268425" onclick="speakJapanese('しぼむ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_268425" onclick="jlptClicked(268425,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_268425" onclick="ufnClicked('萎む',6)" class="ufn_container">
+      <div id="ufn_o268425" class="ufn_outer"><div id="ufn_i268425" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_268425">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_309204">
+                    <a id="jk_309204" onclick="wordDetails(309204, '');"><span class='f_container' id='jk_jk_309204_fc'><div class='furigana' id='jk_jk_309204_f'>うがい</div><div class='f_kanji' id='jk_jk_309204_fk'>含嗽</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_309204">
+                <div id="jk_abbr_309204">
+                      <div class='vm'><div><span>noun, <a href='/grammar/id/420'>'suru' verb</a></span></div>gargling; rinsing one's mouth</div>
+
+                      <div class="ent_item">(click the word to view an additional 1 reading and 1 form)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio309204" onclick="speakJapanese('うがい')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_309204" onclick="jlptClicked(309204,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_309204">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_99786">
+                    <a id="jk_99786" onclick="wordDetails(99786, '');"><span class='f_container' id='jk_jk_99786_fc'><div class='furigana' id='jk_jk_99786_f'>しな</div><div class='f_kanji' id='jk_jk_99786_fk'>萎</div></span>びる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_99786">
+                <div id="jk_abbr_99786">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div>to shrivel (e.g. cut vegetables, skin); to wilt; to fade; to wither; to be wizened&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio99786" onclick="speakJapanese('しなびる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_99786" onclick="jlptClicked(99786,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_99786">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139348">
+                    <a id="jk_139348" onclick="wordDetails(139348, '');"><span class='f_container' id='jk_jk_139348_fc'><div class='furigana' id='jk_jk_139348_f'>こしら</div><div class='f_kanji' id='jk_jk_139348_fk'>拵</div></span>える</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139348">
+                <div id="jk_abbr_139348">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, transitive verb</span></div>to make; to manufacture&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 reading and 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139348" onclick="speakJapanese('こしらえる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139348" onclick="jlptClicked(139348,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_139348" onclick="ufnClicked('拵える',9)" class="ufn_container">
+      <div id="ufn_o139348" class="ufn_outer"><div id="ufn_i139348" class="ufn_inner">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139348">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_326676">
+                    <a id="jk_326676" onclick="wordDetails(326676, '');"><span class='f_container' id='jk_jk_326676_fc'><div class='furigana' id='jk_jk_326676_f'>い</div><div class='f_kanji' id='jk_jk_326676_fk'>厭</div></span>やらしい</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_326676">
+                <div id="jk_abbr_326676">
+                      <div class='vm'><div><span><a href='/grammar/id/451'>'i' adjective</a></span></div><span class='vm_id'>1. </span>disgusting; filthy; repulsive; detestable; unpleasant; disagreeable&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>lewd; lascivious; indecent; obscene; filthy; dirty&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 reading and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio326676" onclick="speakJapanese('いやらしい')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_326676" onclick="jlptClicked(326676,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_326676" onclick="ufnClicked('厭やらしい',9)" class="ufn_container">
+      <div id="ufn_o326676" class="ufn_outer"><div id="ufn_i326676" class="ufn_inner">9</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_326676">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_125272">
+                    <a id="jk_125272" onclick="wordDetails(125272, '');"><span class='f_container' id='jk_jk_125272_fc'><div class='furigana' id='jk_jk_125272_f'>たる</div><div class='f_kanji' id='jk_jk_125272_fk'>弛</div></span>む</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_125272">
+                <div id="jk_abbr_125272">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'mu' godan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to slacken; to loosen; to relax; to droop (e.g. loose or flabby skin); to sag (ceiling)&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to slack off (e.g. one's work, attention); to not put one's heart in&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 1 reading and 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio125272" onclick="speakJapanese('たるむ')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_125272" onclick="jlptClicked(125272,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_125272" onclick="ufnClicked('弛む',5)" class="ufn_container">
+      <div id="ufn_o125272" class="ufn_outer"><div id="ufn_i125272" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_125272">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_273172">
+                    <a id="jk_273172" onclick="wordDetails(273172, '');"><span class='f_container' id='jk_jk_273172_fc'><div class='furigana' id='jk_jk_273172_f'>な</div><div class='f_kanji' id='jk_jk_273172_fk'>嘗</div></span>める</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_273172">
+                <div id="jk_abbr_273172">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to lick</div><div class='vm'><span class='vm_id'>2. </span>to taste</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 meanings and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio273172" onclick="speakJapanese('なめる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_273172" onclick="jlptClicked(273172,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_273172" onclick="ufnClicked('嘗める',7)" class="ufn_container">
+      <div id="ufn_o273172" class="ufn_outer"><div id="ufn_i273172" class="ufn_inner">7</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_273172">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_272796">
+                    <a id="jk_272796" onclick="wordDetails(272796, '');"><span class='f_container' id='jk_jk_272796_fc'><div class='furigana' id='jk_jk_272796_f'>は</div><div class='f_kanji' id='jk_jk_272796_fk'>填</div></span>める</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_272796">
+                <div id="jk_abbr_272796">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to insert; to put in (such that there is a snug fit); to button; to put on (something that envelops, e.g. gloves, ring)&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to have sex; to fuck&nbsp;&nbsp;<span>(colloquialism)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 3 meanings and 4 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio272796" onclick="speakJapanese('はめる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_272796" onclick="jlptClicked(272796,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_272796" onclick="ufnClicked('填める',5)" class="ufn_container">
+      <div id="ufn_o272796" class="ufn_outer"><div id="ufn_i272796" class="ufn_inner">5</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_272796">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_277893">
+                    <a id="jk_277893" onclick="wordDetails(277893, '');"><span class='f_container' id='jk_jk_277893_fc'><div class='furigana' id='jk_jk_277893_f'>は</div><div class='f_kanji' id='jk_jk_277893_fk'>填</div></span>まる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_277893">
+                <div id="jk_abbr_277893">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ru' godan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to fit; to get into; to go into&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to be fit for (a job, etc.); to be suited for; to satisfy (conditions)&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 3 meanings and 5 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio277893" onclick="speakJapanese('はまる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_277893" onclick="jlptClicked(277893,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_277893" onclick="ufnClicked('填まる',6)" class="ufn_container">
+      <div id="ufn_o277893" class="ufn_outer"><div id="ufn_i277893" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_277893">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_272680">
+                    <a id="jk_272680" onclick="wordDetails(272680, '');"><span class='f_container' id='jk_jk_272680_fc'><div class='furigana' id='jk_jk_272680_f'>もた</div><div class='f_kanji' id='jk_jk_272680_fk'>凭</div></span>れる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_272680">
+                <div id="jk_abbr_272680">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to lean against; to lean on; to recline on&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to lie heavy (on the stomach); to be uneasily digested&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio272680" onclick="speakJapanese('もたれる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_272680" onclick="jlptClicked(272680,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_272680" onclick="ufnClicked('凭れる',6)" class="ufn_container">
+      <div id="ufn_o272680" class="ufn_outer"><div id="ufn_i272680" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_272680">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_85387">
+                    <a id="jk_85387" onclick="wordDetails(85387, '');"><span class='f_container' id='jk_jk_85387_fc'><div class='furigana' id='jk_jk_85387_f'>くたび</div><div class='f_kanji' id='jk_jk_85387_fk'>草臥</div></span>れる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_85387">
+                <div id="jk_abbr_85387">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div><span class='vm_id'>1. </span>to get tired; to be exhausted&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to wear out; to be battered from long use&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio85387" onclick="speakJapanese('くたびれる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_85387" onclick="jlptClicked(85387,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_85387" onclick="ufnClicked('草臥れる',6)" class="ufn_container">
+      <div id="ufn_o85387" class="ufn_outer"><div id="ufn_i85387" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_85387">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_273328">
+                    <a id="jk_273328" onclick="wordDetails(273328, '');"><span class='f_container' id='jk_jk_273328_fc'><div class='furigana' id='jk_jk_273328_f'>もた</div><div class='f_kanji' id='jk_jk_273328_fk'>齎</div></span>らす</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_273328">
+                <div id="jk_abbr_273328">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'su' godan verb</a></span></div>to bring; to take; to bring about&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio273328" onclick="speakJapanese('もたらす')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_273328" onclick="jlptClicked(273328,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_273328" onclick="ufnClicked('齎らす',4)" class="ufn_container">
+      <div id="ufn_o273328" class="ufn_outer"><div id="ufn_i273328" class="ufn_inner">4</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_273328">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_139470">
+                    <a id="jk_139470" onclick="wordDetails(139470, '');"><span class='f_container' id='jk_jk_139470_fc'><div class='furigana' id='jk_jk_139470_f'>か</div><div class='f_kanji' id='jk_jk_139470_fk'>涸</div></span>れる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_139470">
+                <div id="jk_abbr_139470">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, intransitive verb</span></div>to dry up (spring, pond, etc.); to run out</div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio139470" onclick="speakJapanese('かれる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_139470" onclick="jlptClicked(139470,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_139470">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_258311">
+                    <a id="jk_258311" onclick="wordDetails(258311, '');"><span class='f_container' id='jk_jk_258311_fc'><div class='furigana' id='jk_jk_258311_f'>きっと</div><div class='f_kanji' id='jk_jk_258311_fk'>屹度</div></span></a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_258311">
+                <div id="jk_abbr_258311">
+                      <div class='vm'><div><span><a href='/grammar/id/546'>adverb</a></span></div><span class='vm_id'>1. </span>surely; undoubtedly; almost certainly; most likely (e.g. 90 percent)&nbsp;&nbsp;<span>(often written with kana only; onomatopoeic or mimetic word)</span></div><div class='vm'><span class='vm_id'>2. </span>sternly; severely&nbsp;&nbsp;<span>(esp. キッと; often written with kana only; onomatopoeic or mimetic word)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 2 meanings and 3 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio258311" onclick="speakJapanese('きっと')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_258311" onclick="jlptClicked(258311,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_258311" onclick="ufnClicked('屹度',3)" class="ufn_container">
+      <div id="ufn_o258311" class="ufn_outer"><div id="ufn_i258311" class="ufn_inner">3</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_258311">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_122348">
+                    <a id="jk_122348" onclick="wordDetails(122348, '');"><span class='f_container' id='jk_jk_122348_fc'><div class='furigana' id='jk_jk_122348_f'>おだ</div><div class='f_kanji' id='jk_jk_122348_fk'>煽</div></span>てる</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_122348">
+                <div id="jk_abbr_122348">
+                      <div class='vm'><div><span><a href='/grammar/id/554'>ichidan verb</a>, transitive verb</span></div><span class='vm_id'>1. </span>to flatter; to soft-soap&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>to instigate; to stir up&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio122348" onclick="speakJapanese('おだてる')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_122348" onclick="jlptClicked(122348,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_122348" onclick="ufnClicked('煽てる',6)" class="ufn_container">
+      <div id="ufn_o122348" class="ufn_outer"><div id="ufn_i122348" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_122348">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_277964">
+                    <a id="jk_277964" onclick="wordDetails(277964, '');"><span class='f_container' id='jk_jk_277964_fc'><div class='furigana' id='jk_jk_277964_f'>ばらま</div><div class='f_kanji' id='jk_jk_277964_fk'>散蒔</div></span>く</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_277964">
+                <div id="jk_abbr_277964">
+                      <div class='vm'><div><span><a href='/grammar/id/555'>'ku' godan verb</a>, transitive verb</span></div>to disseminate; to scatter; to broadcast; to give money freely; to strew&nbsp;&nbsp;<span>(often written with kana only)</span></div>
+
+                      <div class="ent_item">(click the word to view an additional 4 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio277964" onclick="speakJapanese('ばらまく')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_277964" onclick="jlptClicked(277964,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_277964">TEST</div>
+        </div> 
+
+
+
+
+        <div class='jukugorow first last'>
+          <div class="jr_inner">
+
+              <div class="jukugo" id="jk_juk_258320">
+                    <a id="jk_258320" onclick="wordDetails(258320, '');"><span class='f_container' id='jk_jk_258320_fc'><div class='furigana' id='jk_jk_258320_f'>くす</div><div class='f_kanji' id='jk_jk_258320_fk'>擽</div></span>ぐったい</a>
+              </div>
+
+              <div class="jukugo_reading" id="jk_jr_258320">
+                <div id="jk_abbr_258320">
+                      <div class='vm'><div><span><a href='/grammar/id/451'>'i' adjective</a></span></div><span class='vm_id'>1. </span>ticklish&nbsp;&nbsp;<span>(often written with kana only)</span></div><div class='vm'><span class='vm_id'>2. </span>embarrassing</div>
+
+                      <div class="ent_item">(click the word to view an additional 2 forms)</div>
+                </div>
+              </div>
+
+              
+
+
+
+
+
+<span class="tat_audio" id="audio258320" onclick="speakJapanese('くすぐったい')"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+
+                  <div class="w_jlpt_container" id="jlpt_258320" onclick="jlptClicked(258320,1)">
+                    <div class="w_ref">1</div>
+                  </div>
+              
+
+<div id="ufn_258320" onclick="ufnClicked('擽ぐったい',6)" class="ufn_container">
+      <div id="ufn_o258320" class="ufn_outer"><div id="ufn_i258320" class="ufn_inner">6</div></div>
+</div>
+              
+    <div style='float:right;padding-right:15px;'>
+
+      <div><a href="javascript:show_favorites_warning();" id="link" class="logo">
+        <img src="/assets/star_outline-793a47df73b661374bd4f5a6eaafbc572f7ed07edebb74b70f008e45cc58ad2b.png"class="star" /></a>
+      </div>
+
+    </div>
+
+
+          </div> 
+          <div class="jr_details" id="jk_details_258320">TEST</div>
+        </div> 
+
+
+
+<script>
+    function ufnClicked(word, level) {
+        if (!word) word = "This word";
+        $('#ufndiv_word').html(word);
+        $('#ufndiv_level').html(level);
+        var counts = ['500','1,500','3,000','5,000','10,000','15,000','20,000','30,000','50,000','100,000','150,000','250,000'];
+        $('#ufndiv_count').html(counts[level-1]);
+        show_ufn();
+    }
+</script>
+
+<div id="ufn_div" style="display:none;">
+  <div>The Kanshudo usefulness level shows you how useful a Japanese word is for you to learn.
+    <span id="ufndiv_word"></span> has a Kanshudo usefulness level of <span id="ufndiv_level" style="color:darkred;font-weight:bold;"></span>, which means it is among the
+    most useful <span id="ufndiv_count" style="color:darkred;font-weight:bold;"></span> words in Japanese.
+  </div>
+  <div class="spaced">All words in our system
+    are rated from 1-12, where 1 is the most useful.
+    Words with a usefulness level of 9 or better are amongst the most useful 50,000 words in Japanese, and
+    have a colored badge in search results, eg: &nbsp;
+    
+
+<div id="ufn_115002" onclick="ufnClicked('時間',1)" class="ufn_container">
+      <div id="ufn_o115002" class="ufn_outer_mu"><div id="ufn_i115002" class="ufn_inner_mu">1</div></div>
+</div></div>
+  <div class="spaced">Many useful words have multiple forms, and less common
+    forms have a badge that looks like this: &nbsp;
+    
+
+<div id="ufn_333791" onclick="ufnClicked('じかん',1)" class="ufn_container">
+      <div id="ufn_o333791" class="ufn_outer"><div id="ufn_i333791" class="ufn_inner">1</div></div>
+</div>
+  </div>
+  <div class="spaced">For more details on Kanshudo usefulness levels and how to use them for your studies, read our comprehensive guide,
+    <a href="/howto/usefulness">How to prioritize Japanese vocabulary to study</a>.</div>
+</div>
+
+
+
+
+
+
+<script>
+  var footerZ = 0;
+  var shownOnce_ufn = false;
+
+  function show_ufn() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+      if (!shownOnce_ufn) {
+        $('#warning_text_ufn').html('');
+        $('#ufn_div').show().appendTo('#warning_text_ufn');
+        shownOnce_ufn = true;
+      }
+
+    sizeOverlayVarHeight($('#warning_ufn'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_ufn'));
+    });
+    $('#warning_ufn').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_ufn').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_ufn').css({'z-index': '1002'});
+  }
+
+  function hide_ufn() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_ufn').css({'opacity': '0', 'display': 'none'});
+    $('#cover_ufn').css({'display': 'none'});
+  }
+
+  function hide_cancel_ufn() {
+      $('#hide_ufn').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_ufn").click(function() { show_ufn() });
+    $("#hide_ufn").click(function() { hide_ufn() });
+      $("#cancel_ufn").click(function() { hide_ufn() });
+  });
+</script>
+
+
+<div id="cover_ufn" class="cover"></div>
+<div id="warning_ufn" class="warning" style="display: none; ">
+  <a id="hide_ufn" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">Kanshudo Word Usefulness Level</div>
+
+  <div class="w_panel">
+    <div class="w_text" id="warning_text_ufn">Unfortunately that feature is not accessible here. Please contact support if you have any questions.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+
+<script>
+    function jlptClicked(id, level) {
+        var word = $('#jk_jk_'+id+'_fk').html();
+        if (!word) word = $('#jk_'+id).html();
+        if (!word) word = "This word";
+        $('#jlptdiv_word').html(word);
+        $('#jlptdiv_level').html(level);
+        show_jlpt();
+    }
+</script>
+
+<div id="jlpt_div" style="display:none;">
+  <div>The JLPT (Japanese Language Proficiency Test, 日本語能力試験) is the standard test of Japanese language ability for non-Japanese.
+    <span id="jlptdiv_word"></span> would first come up in level
+    <span style="color:darkred;font-weight:bold;">N<span id="jlptdiv_level"></span></span>.
+  </div>
+  <div class="spaced">Kanshudo displays a badge indicating which level of the JLPT words might come up in - N5 (the first and easiest level)
+    through to N1 (the highest). There are no official lists
+    of JLPT vocab, so this analysis is based on past test papers.
+  </div>
+  <div class="spaced">You can use Kanshudo to study words and kanji for the JLPT.
+    Check out our <a href="/collections/wikipedia_jlpt">84 collections of Japanese words by JLPT level</a>, or our
+    <a href="/collections/jlpt_kanji">22 collections of kanji by JLPT level</a>.</div>
+</div>
+
+
+
+
+
+
+<script>
+  var footerZ = 0;
+  var shownOnce_jlpt = false;
+
+  function show_jlpt() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+      if (!shownOnce_jlpt) {
+        $('#warning_text_jlpt').html('');
+        $('#jlpt_div').show().appendTo('#warning_text_jlpt');
+        shownOnce_jlpt = true;
+      }
+
+    sizeOverlayVarHeight($('#warning_jlpt'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_jlpt'));
+    });
+    $('#warning_jlpt').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_jlpt').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_jlpt').css({'z-index': '1002'});
+  }
+
+  function hide_jlpt() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_jlpt').css({'opacity': '0', 'display': 'none'});
+    $('#cover_jlpt').css({'display': 'none'});
+  }
+
+  function hide_cancel_jlpt() {
+      $('#hide_jlpt').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_jlpt").click(function() { show_jlpt() });
+    $("#hide_jlpt").click(function() { hide_jlpt() });
+      $("#cancel_jlpt").click(function() { hide_jlpt() });
+  });
+</script>
+
+
+<div id="cover_jlpt" class="cover"></div>
+<div id="warning_jlpt" class="warning" style="display: none; ">
+  <a id="hide_jlpt" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">JLPT Level</div>
+
+  <div class="w_panel">
+    <div class="w_text" id="warning_text_jlpt">Unfortunately that feature is not accessible here. Please contact support if you have any questions.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+
+        </div>
+
+
+  </div>
+
+</div>
+
+    
+
+
+
+
+<script>
+  var footerZ = 0;
+
+  function show_quick() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+
+    sizeOverlayVarHeight($('#warning_quick'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_quick'));
+    });
+    $('#warning_quick').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_quick').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_quick').css({'z-index': '1002'});
+  }
+
+  function hide_quick() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_quick').css({'opacity': '0', 'display': 'none'});
+    $('#cover_quick').css({'display': 'none'});
+  }
+
+  function hide_cancel_quick() {
+      $('#hide_quick').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_quick").click(function() { show_quick() });
+    $("#hide_quick").click(function() { hide_quick() });
+      $("#cancel_quick").click(function() { hide_quick() });
+  });
+</script>
+
+
+<div id="cover_quick" class="cover"></div>
+<div id="warning_quick" class="warning" style="display: none; ">
+  <a id="hide_quick" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">Kanshudo Quick Study</div>
+
+  <div class="w_panel">
+        <div class="w_image"><img alt="Lightning 458c97330a45b32a444fc6e90abd221fafdd9cbc166c1d9f8a0badb893f9ef84" src="/assets/lightning-458c97330a45b32a444fc6e90abd221fafdd9cbc166c1d9f8a0badb893f9ef84.png" /></div>
+    <div class="w_text" id="warning_text_quick">Quick Study is a great way to study whenever you have a spare few minutes.<br /><br />
+                        Quick Study is free to use, but you need to be a Registered User of Kanshudo.
+                        Please <a href='/users/sign_in'>LOG IN</a> to use Quick Study.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+    
+
+
+
+
+<script>
+  var footerZ = 0;
+
+  function show_flashcards() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+
+    sizeOverlayVarHeight($('#warning_flashcards'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_flashcards'));
+    });
+    $('#warning_flashcards').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_flashcards').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_flashcards').css({'z-index': '1002'});
+  }
+
+  function hide_flashcards() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_flashcards').css({'opacity': '0', 'display': 'none'});
+    $('#cover_flashcards').css({'display': 'none'});
+  }
+
+  function hide_cancel_flashcards() {
+      $('#hide_flashcards').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_flashcards").click(function() { show_flashcards() });
+    $("#hide_flashcards").click(function() { hide_flashcards() });
+      $("#cancel_flashcards").click(function() { hide_flashcards() });
+  });
+</script>
+
+
+<div id="cover_flashcards" class="cover"></div>
+<div id="warning_flashcards" class="warning" style="display: none; ">
+  <a id="hide_flashcards" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">Kanshudo Flashcards</div>
+
+  <div class="w_panel">
+        <div class="w_image"><img alt="Flashcards de17a3f8d3d0d82d89ceec87ee7365d3fdf03657a29cc94326e850269116683f" src="/assets/flashcards-de17a3f8d3d0d82d89ceec87ee7365d3fdf03657a29cc94326e850269116683f.png" /></div>
+    <div class="w_text" id="warning_text_flashcards">Kanshudo Flashcards are the best way to study and keep track of what you've studied.
+                        Our flashcards use spaced repetition, the most efficient memorization system.<br /><br />
+                        Flashcards are free to use, but you need to be a Registered User of Kanshudo.
+                        Please <a href='/users/sign_in'>LOG IN</a> to use Flashcards.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+    
+
+
+
+
+<script>
+  var footerZ = 0;
+
+  function show_mastery() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+
+    sizeOverlayVarHeight($('#warning_mastery'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_mastery'));
+    });
+    $('#warning_mastery').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_mastery').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_mastery').css({'z-index': '1002'});
+  }
+
+  function hide_mastery() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_mastery').css({'opacity': '0', 'display': 'none'});
+    $('#cover_mastery').css({'display': 'none'});
+  }
+
+  function hide_cancel_mastery() {
+      $('#hide_mastery').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_mastery").click(function() { show_mastery() });
+    $("#hide_mastery").click(function() { hide_mastery() });
+      $("#cancel_mastery").click(function() { hide_mastery() });
+  });
+</script>
+
+
+<div id="cover_mastery" class="cover"></div>
+<div id="warning_mastery" class="warning" style="display: none; ">
+  <a id="hide_mastery" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">Kanshudo Kanji Mastery</div>
+
+  <div class="w_panel">
+        <div class="w_image"><img alt="Kanjiwheel3 1dc6a170448c73294e42d366593f40881dd18a7aa88b962ab344e4b37d2260e9" src="/assets/kanjiwheel3-1dc6a170448c73294e42d366593f40881dd18a7aa88b962ab344e4b37d2260e9.png" /></div>
+    <div class="w_text" id="warning_text_mastery">Your Kanji Mastery score shows how well you know each kanji,
+                        and your <a href='/kanjimastery'>Kanji Wheel</a> provides a visual summary of your
+                        entire kanji knowledge.<br /><br />
+                        Kanji Mastery is free to use, but you need to be a Registered User of Kanshudo.
+                        Please <a href='/users/sign_in'>LOG IN</a> to see Kanji Mastery data.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+    
+
+
+
+
+<script>
+  var footerZ = 0;
+
+  function show_download() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+
+    sizeOverlayVarHeight($('#warning_download'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_download'));
+    });
+    $('#warning_download').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_download').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_download').css({'z-index': '1002'});
+  }
+
+  function hide_download() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_download').css({'opacity': '0', 'display': 'none'});
+    $('#cover_download').css({'display': 'none'});
+  }
+
+  function hide_cancel_download() {
+      $('#hide_download').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_download").click(function() { show_download() });
+    $("#hide_download").click(function() { hide_download() });
+      $("#cancel_download").click(function() { hide_download() });
+  });
+</script>
+
+
+<div id="cover_download" class="cover"></div>
+<div id="warning_download" class="warning" style="display: none; ">
+  <a id="hide_download" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">Download</div>
+
+  <div class="w_panel">
+        <div class="w_image"><img alt="Download f20b92eef62cedeb745641215425a1938ac9188c23e7c7f72eb4a6867bbf13e9" src="/assets/download-f20b92eef62cedeb745641215425a1938ac9188c23e7c7f72eb4a6867bbf13e9.png" /></div>
+    <div class="w_text" id="warning_text_download">Download these kanji, together with readings and meanings, for use outside
+                        Kanshudo, for example in another flashcard program.<br /><br />
+                        This function is accessible to Kanshudo Pros.
+                        Please <a href='/users/sign_in'>LOG IN</a> to download.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="footernew" id="footer">
+  <div class="fmain">
+
+    <div class="fsection">
+      <div class="fsheader">Information and help</div>
+      <div><a href="/tour">Kanshudo tour</a></div>
+      <div><a href="/howto/kanshudo">How to use Kanshudo</a></div>
+      <div><a href="/howto/getting_started_learning_japanese">How to learn Japanese</a></div>
+      <div><a href="/how-to-master-the-kanji">How to master kanji</a></div>
+      <div><a href="/howto">More &#39;how to&#39; guides</a></div>
+      <div><a href="/features">Key feature index</a></div>
+      <div><a href="/searchsite">Site search</a></div>
+      <div><a href="/faq">FAQ</a></div>
+      <div><a href="/index">Site index</a></div>
+      <div><a href="/study">Study index</a></div>
+      <div><a href="/play">Play index</a></div>
+      <div><a href="/testimonials">Testimonials</a></div>
+        <div><a href="/contact">Contact</a></div>
+    </div>
+
+    <div class="fsection">
+      <div class="fsheader">Kanji & kana</div>
+      <div><a href="/kanjimastery"><span class='ja-circles_kanji'></span> My kanji mastery</a></div>
+      <div><a href="/hiragana">About hiragana</a></div>
+      <div><a href="/katakana">About katakana</a></div>
+      <div><a href="/kanji_intro">About kanji</a></div>
+      <div><a href="/component_details">Kanji components</a></div>
+      <div><a href="/draw">Drawing practice</a></div>
+      <div><a href="/quick">Quick study</a></div>
+      <div><a href="/srs">Flashcards</a></div>
+      <div><a href="/collections">Kanji collections</a></div>
+      <div><a href="/challenge">Kanji Challenge</a></div>
+      <div><a href="/quiz">Kanji Quiz</a></div>
+      <div><a href="/play/kanjibuilder">Kanji Builder</a></div>
+      <div><a href="/kanjimatch">Kanji Match</a></div>
+    </div>
+
+    <div class="fsection">
+      <div class="fsheader">Words</div>
+      <div><a href="/words/mastery"><span class='ja-circles_words'></span> My word mastery</a></div>
+      <div><a href="/quick">Quick study</a></div>
+      <div><a href="/srs">Flashcards</a></div>
+      <div><a href="/wordquiz">Word Quiz</a></div>
+      <div><a href="/wordmatch">Word Match</a></div>
+      <div><a href="/play/sentencecomplete">Sentence Complete</a></div>
+      <div><a href="/collections">Word collections</a></div>
+    </div>
+
+    <div class="fsection">
+      <div class="fsheader">Grammar</div>
+      <div><a href="/grammar/mastery"><span class='ja-circles_grammar'></span> My grammar mastery</a></div>
+      <div><a href="/grammar">Grammar library</a></div>
+      <div><a href="/quick">Quick study</a></div>
+      <div><a href="/srs">Flashcards</a></div>
+    </div>
+
+    <div class="fsection">
+      <div class="fsheader">My account</div>
+      <div><a href="/dashboard"><span class='ja-jm'></span> Dashboard</a></div>
+      <div><a href="/account">Account &amp; settings</a></div>
+      <div><a href="/favorites">My favorites</a></div>
+      <div><a href="/studypoints">My study points</a></div>
+      <div><a href="/studyhistory?month=current">My study history</a></div>
+      <div><a href="/daily_kanji">Daily Kanji</a></div>
+        <div><a href="/users/sign_in">Log in</a> | <a href="/users/sign_up">Register</a></div>
+    </div>
+
+
+    <div class="fsection">
+      <div class="fsheader">Search</div>
+      <div><a href="/searchq">Quick search</a></div>
+      <div><a href="/search">Kanji search</a></div>
+      <div><a href="/search?cb=y">Kanji by component</a></div>
+      <div><a href="/searchmn">Kanji by mnemonic</a></div>
+      <div><a href="/searchw">Word search</a></div>
+      <div><a href="/sentence_analyze">Sentence translate</a></div>
+      <div><a href="/grammar">Grammar search</a></div>
+      <div><a href="/searchn">Name search</a></div>
+      <div><a href="/searcht">Example search</a></div>
+      <div><a href="/poi">Points of interest</a></div>
+      <div><a href="/searchsite">Site search</a></div>
+      <div><a href="/history">My search history</a></div>
+      <div><a href="/search_advanced">Search index</a></div>
+    </div>
+
+  </div>
+
+  <div class="fsocial">
+    <a href="/blog">Blog</a> &nbsp;
+    <a href="https://www.facebook.com/kanjimastery" target=" _blank"><span class="fa fa-facebook-square"></span></a> &nbsp;
+    <a href="https://www.twitter.com/kanshudo" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="flegal">
+    <div>
+      <a href="/privacy">Privacy</a> &nbsp;
+      <a href="/credits">Credits</a> &nbsp;
+      <a href="/tc">Terms &amp; conditions</a>
+    </div>
+    <div>
+      Copyright © Kanshudo 2019
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+<script>
+  var footerZ = 0;
+
+  function show_favorites_warning() {
+    footerZ = $('#footer').css('z-index');
+    $('#footer').css('z-index', -1);
+    $('#credits').css('z-index', -1);
+
+
+    sizeOverlayVarHeight($('#warning_favorites_warning'));
+    $(window).resize(function () {
+        sizeOverlayVarHeight($('#warning_favorites_warning'));
+    });
+    $('#warning_favorites_warning').css({'opacity': '1', 'z-index': '1001'});
+    $('#cover_favorites_warning').css({'opacity': '1','z-index': '1000'}).fadeIn(500);
+    $('#cancel_favorites_warning').css({'z-index': '1002'});
+  }
+
+  function hide_favorites_warning() {
+    $('#footer').css('z-index', footerZ);
+    $('#warning_favorites_warning').css({'opacity': '0', 'display': 'none'});
+    $('#cover_favorites_warning').css({'display': 'none'});
+  }
+
+  function hide_cancel_favorites_warning() {
+      $('#hide_favorites_warning').hide();
+  }
+
+  $(document).ready(function () {
+    $("#show_favorites_warning").click(function() { show_favorites_warning() });
+    $("#hide_favorites_warning").click(function() { hide_favorites_warning() });
+      $("#cancel_favorites_warning").click(function() { hide_favorites_warning() });
+  });
+</script>
+
+
+<div id="cover_favorites_warning" class="cover"></div>
+<div id="warning_favorites_warning" class="warning" style="display: none; ">
+  <a id="hide_favorites_warning" class="x-hide">&times;</a>
+
+      <div class="w_title" style="">Favorites</div>
+
+  <div class="w_panel">
+    <div class="w_text" id="warning_text_favorites_warning">Please <a href='/users/sign_in'>LOG IN</a> to use
+                        Favorites.<br /><br />
+                        Wherever you see the <span class='ja-star' style='color: #58c051;'></span> green star,
+                        you can tag any kanji, word or grammar point for future reference in your
+                        <a href='/favorites'>Favorites</a> list, which is accessible from the main menu.
+                         You can automatically create <a href='/srs'>flashcards</a> from your Favorites,
+                         or use <a href='/quick'>Quick Study</a> to study them any time.</div>
+  </div>
+
+
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+
+
+<div id="ms">
+  <a id="ms_hide">&times;</a>
+  <div id="ms_head"></div>
+  <div id="ms_subhead"></div>
+</div>
+
+
+
+
+<script>
+  var target;
+  function launch() {
+    $("#cbhide").click(hideCBuilder);
+    $(window).resize(sizeCBuilder);
+
+    
+
+    initCBuilder();
+
+  }
+  function setTarget(divId) {
+      target = divId;
+  }
+  function select(kanji) {
+    $('#'+target).val($('#'+target).val() + kanji);
+    cbreset();
+    if (kanji == '𠂉') {
+      location.href = encodeURI('/kanji/𠂉');
+    } else {
+      hideCBuilder();
+    }
+  }
+
+  $(document).ready(launch);
+</script>
+
+
+<div id="cover"> </div>
+
+    <div id="cb">
+
+      <div id="components">
+        <div id="inputsdiv"><div class="buttondiv"><button id="cbreset" type="submit">Reset
+        </button></div><div class="inputdiv"><input type="text" id="ctext" spellcheck="false"
+                                                    autocorrect="off" autocapitalize="off" autocomplete="off"
+        /></div><div id="helpsettingsdiv"><button id="settingsb" type="submit"
+        >Change list</button><div
+        id="clistmessage" class="listtitle"></div><button id="helpb" type="submit"
+        >Help</button></div></div>
+        <button id="cbhide">&times;</button>
+        <div id="componentslist"></div>
+        <div id="kanjifounddiv"></div>
+        <div id="divComponents"></div>
+      </div>
+
+      <div id="settingsdiv">
+
+        <button id="hidesettingsb">&times;</button>
+        <div class="cbtitle">Change component list</div>
+
+        <div style="margin-bottom: 20px;">By default the component builder shows the most common components (themselves joyo kanji, or used in
+          at least 3 other joyo kanji). Select an alternative set of components below.</div>
+
+        <input checked="checked" id="list_3" name="list" type="radio" value="3" />
+        <label for="list_3">Components used commonly in the joyo kanji</label><br />
+        <input id="list_2" name="list" type="radio" value="2" />
+        <label for="list_2">Standard radicals (and their variants) only</label><br />
+        <input id="list_1" name="list" type="radio" value="1" />
+        <label for="list_1">All components and radicals</label><br />
+
+        <button id="settingssave" class="searchbutton">Apply</button>
+
+        <div class="bodypara1">Full details of
+          all components and their English names can be found <a href="/component_details">here</a>.</div>
+
+      </div>
+
+      <div id="helpdiv">
+
+        <button id="hidehelpb">&times;</button>
+        <div class="cbtitle">Help with the component builder</div>
+
+        <div id="helpcontents">
+
+          <div class="bodypara">For detailed instructions, see the <a href="/howto/component-builder">Component builder how to guide</a>.</div>
+
+          <div class="bodypara">To find any kanji, first try to identify the components it is made up of.</div>
+
+          <div class="bodypara">For any components you recognize, if you know the English meaning or name,
+            start typing it in the text area. Full details of
+            all components and their English names can be found <a href="/component_details">here</a>.</div>
+
+          <div class="bodypara">Alternatively, count the strokes of the component,
+            and scan the list to find it visually.</div>
+
+          <div class="cbtitle">Example</div>
+          <div class="bodypara">To find the kanji <span class="cbkanji">漢</span>:
+            <ul><li>Notice that it is made of several components: 氵 艹 口 夫.</li>
+              <li>氵 艹 口 all have three strokes, so you could look in the list in
+                the 3 stroke section. 夫 has four strokes.</li>
+              <li>Alternatively, you could start typing 'water' (氵), 'grass' (艹), 'mouth' (口) or 'husband' (夫)
+                in the search area, and the components will be highlighted
+                in yellow.</li>
+              <li>Keep adding components until you can see your kanji in the list of matches that appears near the top.</li></ul></div>
+
+        </div>
+      </div>
+
+    </div>
+
+<!--</div>-->
+</body>
+</html>
