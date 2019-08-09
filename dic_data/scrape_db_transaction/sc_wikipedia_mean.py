@@ -29,7 +29,7 @@ def pushData(parent,dict):
 	users_ref.set(dict)
 """main()"""
 #認証ファイルPATH
-certificate_json_path='/home/eggplant/Downloads/diction_hack/wordchain-bfb8b-firebase-adminsdk-ldxik-065ed5d647.json'
+certificate_json_path='~/word-chain/wordchain-bfb8b-firebase-adminsdk-ldxik-065ed5d647.json'
 #DBとアプリへの認証
 if (not len(firebase_admin._apps)):
 	cred = credentials.Certificate(certificate_json_path) 
@@ -50,7 +50,7 @@ LINKS={}
 dicdata=[]
 words=[]
 means=[]
-PDD_PATH="/home/eggplant/Downloads/diction_hack/dic_data_ja_romaji/all/dic_head/ALL.txt"
+PDD_PATH="~/word-chain/dic_data/pdd_pagedata/all/ALL.txt"
 #カカシ(Hiragana_To_Rome)
 kakasi = kakasi()
 kakasi.setMode('H', 'a')
@@ -61,17 +61,16 @@ with open(PDD_PATH) as f:
 	for l in f:
 		l=l.rstrip()
 		if not l:
-			if word_p != words[0]:
-				id+=1
 			means.append("\n".join(means))
-			json={words[0][0] : {
-				words[0] : {
-					str(id) : {[{
-					"means" : ','.join(map(str,means))
-					"words" : ','.join(map(str,a[1:]))
-					}]}
+			json={
+				words[0][0] : {
+					words[0] : [{
+						"means" : ','.join(map(str,means))
+						"words" : ','.join(map(str,a[1:]))
+					}]
 				}
 			}
+			print(json);exit()
 			dicdata.append(json)
 			word_p = words[0]
 			words,means=[],[]
@@ -98,5 +97,3 @@ for query in dicdata:
 	#DBに頭文字がおらない
 	else:
 		appendData("/PDD_mean",head,query[head])
-
-
