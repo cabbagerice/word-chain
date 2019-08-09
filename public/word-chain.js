@@ -26,36 +26,40 @@ var db = admin.database();
 
 (function() {
 
-    var key, curword, preend;
+    var curword, preend, reply;
     var used = ["しりとり"], turn = 1, endnum=1;
     var botui = new BotUI('siritori');
     
-    //初期メッセージ
-    botui.message.bot({ // show first message
-      delay: 200,
-      content: 'hello'
-    }).then(() => {
-      return botui.message.bot({ // second one
-        delay: 1000, // wait 1 sec.
-        content: 'Let\'s Shiritori'
-      })
-    }).then(() => {
-      return botui.message.bot({ // second one
-        delay: 1000, // wait 1 sec.
-        content: 'First character is 「り」of 「しりとり」'
-      })
-    }).then(() => {
-      return botui.action.text({ // let user do something
-        delay: 1000,
-        action: {
+    init();
+
+
+    function init(){
+      //初期メッセージ
+      botui.message.bot({ // show first message
+        delay: 200,
+        content: 'hello'
+      }).then(() => {
+        return botui.message.bot({ // second one
+          delay: 1000, // wait 1 sec.
+          content: 'Let\'s Shiritori'
+        })
+      }).then(() => {
+        return botui.message.bot({ // second one
+          delay: 1000, // wait 1 sec.
+          content: 'First character is 「り」of 「しりとり」'
+        })
+      }).then(() => {
+        return botui.action.text({ // let user do something
+          delay: 500,
+          action: {
             placeholder: 'り'
           }
-      })
-    }).then(res => {
-      curword = res.value;
-      checkinput(curword, 'り');
-    })
-
+        })
+      }).then(res => {
+        curword = res.value;
+        checkinput(curword, 'り');
+      });
+    }
 
     //入力された語がしりとりとして成立しているかを判別し、繰り返し入力を促すver.
     //小文字を処理するようにする(日本語の小文字大文字を変換する機能はない)
@@ -69,16 +73,17 @@ var db = admin.database();
 
         /*ここで西田の作ったプログラムを呼んで返答を取得 */
         //var reply = randompick(preend);
-        postForm(curword);
+        //postForm(curword);
+        reply = samplePost(curword);
 
 
         botui.message.bot({
             content: preend
         }).then( () => {
             return botui.action.text({
-                delay: 500,
+                delay: 200,
                 action: {
-                    placeholder: preend
+                    placeholder: reply
                 }
             })
         }).then( res => {
@@ -196,6 +201,41 @@ var db = admin.database();
         });
     }
 
+    
+
+    let samplePost = function(word){
+      url = "sample.py";
+      //レスポンス
+      var response = {};
+  
+      //リクエスト
+      let request = {para_1 : word,
+                     para_2 : encodeURI("日本語送信")};
+  
+      //ajax
+      $.ajax({
+        type        : "POST",
+        url         : url,
+        data        : JSON.stringify(request),  //object -> json
+        async       : false,                    //true:非同期(デフォルト), false:同期
+        dataType    : "json",
+        success     : function(data) {
+          //data = JSON.parse(data);  //error
+          response = data;
+        },
+        error       : function(XMLHttpRequest, textStatus, errorThrown) {
+          console.log("リクエスト時になんらかのエラーが発生しました\n" + url + "\n" + textStatus +":\n" + errorThrown);
+        }
+      });
+  
+      //表示
+      console.log(response);
+      return response;
+    }
+
+
+    /*db, post関係のコード*/
+    {
     function postForm(value) {
 
       var form = document.createElement('form');
@@ -407,6 +447,7 @@ var db = admin.database();
         console.log("The read failed: " + errorObject.code);
       } );
       return replyword;
+    }
     }
       
   
