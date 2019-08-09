@@ -27,8 +27,14 @@
       "source": "/promos/**",
       "dynamicLinks": true
     }, {
-      "source": "/isWordExist",
-      "function": "bisWordExist"
+      "source": "**/isWordExist",
+      "function": "isWordExist"
+    }, {
+      "source": "**/WordResponse",
+      "function": "WordResponse"
+    }, {
+      "source": "**/StoreData",
+      "function": "StoreData"
     }],
 
     "headers": [ {
