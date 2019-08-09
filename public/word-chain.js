@@ -2,8 +2,10 @@
 使用: https://github.com/botui/botui
 参考: https://github.com/webhacck/botui-sample/tree/master/docs
 */
+/*
+ターン数はused[]の要素数(length?)を取れば行けそう
+*/
 
-/*getSiritoriResponse.jsよりコピペ*/
 {
 /*
 var admin = require("firebase-admin");
@@ -16,16 +18,16 @@ admin.initializeApp({
   databaseURL: "https://wordchain-bfb8b.firebaseio.com"
 });
 
-var db = admin.database();
 
-//ここまでコピペ
+var db = admin.database();
 */
 }
+
 
 (function() {
 
     var key, curword, preend;
-    var used = ["しりとり"], turn = 1, conti;
+    var used = ["しりとり"], turn = 1, endnum=1;
     var botui = new BotUI('siritori');
     
     //初期メッセージ
@@ -67,7 +69,7 @@ var db = admin.database();
 
         /*ここで西田の作ったプログラムを呼んで返答を取得 */
         //var reply = randompick(preend);
-
+        postForm(curword);
 
 
         botui.message.bot({
@@ -89,7 +91,6 @@ var db = admin.database();
 
     
     //入力をチェックし、入力に応じたメッセージの表示, 入力に応じた引数でword_chainを呼び出す
-
     function checkinput(curword, preend){
 
       console.log("in: checkinput");
@@ -132,6 +133,7 @@ var db = admin.database();
       }else { 
           console.log("checkinput: true");
           if(isend){
+            endnum += 1;
             botui.message.bot({
               content: endmessage
             }).then(end(preend));
@@ -160,35 +162,38 @@ var db = admin.database();
         
       }).then(function(){
           console.log(used);
-          return botui.message.bot({
-            content: '続けますか?'
-          })
-      }).then( () => {
-        return botui.action.button({
-          delay: 100,
-          action: [
-            {
-              text: 'continue',
-              value: 'continue'
-            },
-            {
-              text: 'finish',
-              value: 'finish'
-            }
-          ]
-        })
-      }).then( res => {
-        conti = res.value;
-        if(conti === "continue"){
-          word_chain(preend);
-        }else{
-          botui.message.bot({
-            delay: 100,
-            content: "ありがとうございました"
-          })
-        }
-
-      })
+          if(endnum <= 3){
+            botui.message.bot({
+              content: "続けますか"
+            }).then( ()=> {
+              return botui.action.button({
+                delay: 100,
+                action: [{
+                    text: 'continue',
+                    value: 'continue'
+                  },{
+                    text: 'finish',
+                    value: 'finish'
+                  }
+                ]
+              })
+            }).then( res => {
+              conti = res.value;
+              if(conti === "continue"){
+                word_chain(preend);
+              }else{
+                botui.message.bot({
+                  delay: 100,
+                  content: "ありがとうございました"
+                })
+              }
+            })
+          }else{
+            botui.message.bot({
+              content: "ありがとうございました"
+            })
+          }
+        });
     }
 
     function postForm(value) {
@@ -208,6 +213,9 @@ var db = admin.database();
       
       form.submit();
       
+    }
+    function getForm(value){
+
     }
 
     function randompick(last_word){
