@@ -37,16 +37,16 @@ var db = admin.database();
       //初期メッセージ
       botui.message.bot({ // show first message
         delay: 200,
-        content: 'hello'
+        content: 'こんにちは'
       }).then(() => {
         return botui.message.bot({ // second one
-          delay: 1000, // wait 1 sec.
-          content: 'Let\'s Shiritori'
+          delay: 500, // wait 1 sec.
+          content: 'しりとりしましょう'
         })
       }).then(() => {
         return botui.message.bot({ // second one
           delay: 1000, // wait 1 sec.
-          content: 'First character is 「り」of 「しりとり」'
+          content: 'はじめは「しりとり」の「り」'
         })
       }).then(() => {
         return botui.action.text({ // let user do something
