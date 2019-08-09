@@ -103,7 +103,7 @@ var db = admin.database();
       var curhead = curword.trim().slice(0,1); //先頭の文字を返す
       var curend = curword.trim().charAt(curword.length -1); //最後の文字を返す
 
-      var istwice = 0, isend = 1;
+      var istwice = 0, isend = 1, isInDic = 1;
 
       for(let i=0; used[i] !== undefined; i++){
         if(used[i] === curword) {
@@ -118,15 +118,21 @@ var db = admin.database();
       }else if(curhead !== preend){
           err_message = preend + ' から始まる語を入力してください'
       }else {
-        //ミスがないとき
-        collectness = true;
-        used.push(curword);
-        if(istwice){
-          endmessage = "その言葉はもう使われました";
-        }else if(curend === "ん"){
-          endmessage = "「ん」がつきました";
-        }else {
-          isend = 0;
+        /*平仮名で「しり」をちゃんととってる場合*/
+        /*ここで入力が辞書にあるかどうかを判別する、結果はisInDicとかに格納し, ifで場合分け*/
+        //isInDic = post
+        if(!isInDic){
+          err_message = "その言葉は辞書に登録されておりません"
+        }else{
+          collectness = true;
+          used.push(curword);
+          if(istwice){
+            endmessage = "その言葉はもう使われました";
+          }else if(curend === "ん"){
+            endmessage = "「ん」がつきました";
+          }else {
+            isend = 0;
+          }
         }
       }
 
@@ -204,21 +210,24 @@ var db = admin.database();
     
 
     let samplePost = function(word){
-      url = "sample.py";
+      url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/helloWorld";
       //レスポンス
       var response = {};
-  
       //リクエスト
-      let request = {para_1 : word,
+      let request = {};
+      /*
+      {para_1 : word,
                      para_2 : encodeURI("日本語送信")};
+                     */
   
       //ajax
       $.ajax({
         type        : "POST",
         url         : url,
         data        : JSON.stringify(request),  //object -> json
-        async       : false,                    //true:非同期(デフォルト), false:同期
+        async       : true,                    //true:非同期(デフォルト), false:同期
         dataType    : "json",
+        headers     : "https://us-central1-wordchain-bfb8b.cloudfunctions.net",
         success     : function(data) {
           //data = JSON.parse(data);  //error
           response = data;
