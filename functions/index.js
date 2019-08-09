@@ -38,47 +38,49 @@ exports.isWordExist = functions.https.onRequest((req, res) => {
 });
 
 
-/*
-/////////でたべに既出単語を書き込む////////////
-// Take the text parameter passed to this HTTP endpoint and insert it into the
-// Realtime Database under the path /messages/:pushId/original
-exports.isWordExist = functions.https.onRequest(async (req, res) => {
-  // Grab the text parameter.
-  const original = req.body.text; //GETリクエストでもらう。POSTにするならreq.body.~~
-  // Push the new message into the Realtime Database using the Firebase Admin SDK.
-  const snapshot = await admin.database().ref('/messages').push({original: original});
-  // Redirect with 303 SEE OTHER to the URL of the pushed object in the Firebase console.
-  res.redirect(303, snapshot.ref.toString());
-});
-exports.isWordExit = functions.https.onRequest((req, res) => {
+
+/////////でたべから単語を引っ張り出してくる.リクエストの送り方はPOSTで{"lastword":"文字列のけつ","random_num":数字}////////////
+exports.WordResponse = functions.https.onRequest((req, res) => {
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
     return;
   }
-  const original = req.body.text;
 
+  var db = admin.database();
 
-
-
-  res.status(200).send(req.body);
-});
-*/
-//////////でたべの既出単語チェック。チュートリアルのUpperCaseに対応。実装するかは…////////
-// Listens for new messages added to /messages/:pushId/original and creates an
-// uppercase version of the message to /messages/:pushId/uppercase
-/*
-exports.makeSure = functions.database.ref('/messages/{pushId}/original')
-    .onCreate((snapshot, context) => {
-      // Grab the current value of what was written to the Realtime Database.
-      const original = snapshot.val();
-      //console.log('Uppercasing', context.params.pushId, original);
-      const uppercase = original.toUpperCase();
-      // You must return a Promise when performing asynchronous tasks inside a Functions such as
-      // writing to the Firebase Realtime Database.
-      // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-      return snapshot.ref.parent.child('uppercase').set(uppercase);
+  db.ref('/PDD_hum/'+ req.body.lastword +'/' + req.body.random_num).once("value")
+    .then((snapshot) =>{
+      replyword = snapshot.val();
+      res.status(200).send(replyword);
+      return replyword;
+    }).catch(e => {
+        console.log(e);
+        res.sendStatus(500);
     });
-*/
+});
+
+///////データに保存！！JSON形式で飛んできたデータを配列形式に直して格納。配列⇆JSONは参考:https://www.sejuku.net/blog/47716//////////
+exports.StoreData = functions.https.onRequest((req, res) => {
+  if (req.method !== 'POST') {
+    res.status(405).send('Method Not Allowed');
+    return;
+  }
+
+  var db = admin.database();
+
+  db.ref('/GAME/'+ req.body.lastword +'/' + req.body.random_num).once("value")
+    .then((snapshot) =>{
+      replyword = snapshot.val();
+      res.status(200).send(replyword);
+      return replyword;
+    }).catch(e => {
+        console.log(e);
+        res.sendStatus(500);
+    });
+});
+
+
+
 
 /*
 exports.makeUppercase = functions.database.ref('/PDD_hum/{pushId}/')
