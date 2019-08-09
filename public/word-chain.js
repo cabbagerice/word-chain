@@ -97,7 +97,15 @@ var db = admin.database();
       var curhead = curword.trim().slice(0,1); //先頭の文字を返す
       var curend = curword.trim().charAt(curword.length -1); //最後の文字を返す
 
-      var err_message;
+      var istwice = 0, isend = 1;
+
+      for(let i=0; used[i] !== undefined; i++){
+        if(used[i] === curword) {
+          istwice = 1; 
+          break;
+        }
+      }
+      var err_message, endmessage;
       let collectness = false;
       if(!isHiragana(curword)){
           err_message = 'ひらがなで入力してください';
@@ -107,6 +115,13 @@ var db = admin.database();
         //ミスがないとき
         collectness = true;
         used.push(curword);
+        if(istwice){
+          endmessage = "その言葉はもう使われました";
+        }else if(curend === "ん"){
+          endmessage = "「ん」がつきました";
+        }else {
+          isend = 0;
+        }
       }
 
       if(collectness === false){
@@ -116,10 +131,10 @@ var db = admin.database();
           }).then(word_chain(preend));
       }else { 
           console.log("checkinput: true");
-          if(curend === "ん"){
-              botui.message.bot({
-                content: '「ん」がつきました.'
-              }).then(end(preend));
+          if(isend){
+            botui.message.bot({
+              content: endmessage
+            }).then(end(preend));
           }else{
             word_chain(curword);
           }
@@ -141,7 +156,7 @@ var db = admin.database();
     function end(preend) {
 
       botui.message.bot({
-        content: 'YOU LOSE\n俺の勝ち\nなんで負けたか、明日まで考えといてください'
+        content: 'YOU LOSE\n\nなんで負けたか、明日まで考えといてください'
         
       }).then(function(){
           console.log(used);
@@ -150,7 +165,7 @@ var db = admin.database();
           })
       }).then( () => {
         return botui.action.button({
-          delay: 200,
+          delay: 100,
           action: [
             {
               text: 'continue',
@@ -168,7 +183,7 @@ var db = admin.database();
           word_chain(preend);
         }else{
           botui.message.bot({
-            delay: 200,
+            delay: 100,
             content: "ありがとうございました"
           })
         }
