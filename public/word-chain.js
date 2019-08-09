@@ -73,8 +73,9 @@ var db = admin.database();
 
         /*ここで西田の作ったプログラムを呼んで返答を取得 */
         //var reply = randompick(preend);
-        //postForm(curword);
-        reply = samplePost(curword);
+        var reply = "NUll";
+        //reply = postForm(curword);
+
 
 
         botui.message.bot({
@@ -120,8 +121,8 @@ var db = admin.database();
       }else {
         /*平仮名で「しり」をちゃんととってる場合*/
         /*ここで入力が辞書にあるかどうかを判別する、結果はisInDicとかに格納し, ifで場合分け*/
-        //isInDic = post
-        if(!isInDic){
+        isInDic = isWordExist(curword, curhead);
+        if(isInDic === "NO"){
           err_message = "その言葉は辞書に登録されておりません"
         }else{
           collectness = true;
@@ -209,25 +210,23 @@ var db = admin.database();
 
     
 
-    let samplePost = function(word){
-      url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/helloWorld";
+    function isWordExist(word, initial){
+      console.log(word + initial);
+      url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist";
       //レスポンス
       var response = {};
       //リクエスト
-      let request = {};
-      /*
-      {para_1 : word,
-                     para_2 : encodeURI("日本語送信")};
-                     */
+      let data = {"text": "あんこ", 
+                    "initial": "あ"};
   
       //ajax
       $.ajax({
         type        : "POST",
         url         : url,
-        data        : JSON.stringify(request),  //object -> json
+        data        : JSON.stringify(data),  //object -> json
         async       : true,                    //true:非同期(デフォルト), false:同期
         dataType    : "json",
-        headers     : "https://us-central1-wordchain-bfb8b.cloudfunctions.net",
+        contentType: 'application/json ;charset=utf-8' ,
         success     : function(data) {
           //data = JSON.parse(data);  //error
           response = data;
@@ -251,7 +250,7 @@ var db = admin.database();
       var request = document.createElement('input');
       
       form.method = 'POST';
-      form.action = 'getSiritoriResponse.js';
+      form.action = 'https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist';
       
       request.type = 'hidden'; //入力フォームが表示されないように
       request.name = 'text';
