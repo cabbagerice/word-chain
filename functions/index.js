@@ -12,6 +12,7 @@ admin.initializeApp({
   databaseURL: "https://wordchain-bfb8b.firebaseio.com"
 });
 
+//{"text":"文字列","initial":"文字列の頭文字"}の形のPOSTリクエストを受け付けて、データベースのPDD_botスキーマにアクセスし、ワードがあるかどうかをYESNOで返す.
 exports.isWordExist = functions.https.onRequest((req, res) => {
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
