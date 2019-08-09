@@ -13,6 +13,7 @@ admin.initializeApp({
 });
 
 //{"text":"文字列","initial":"文字列の頭文字"}の形のPOSTリクエストを受け付けて、データベースのPDD_botスキーマにアクセスし、ワードがあるかどうかをYESNOで返す.
+
 exports.isWordExist = functions.https.onCall((req, res) => {
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
@@ -61,6 +62,7 @@ exports.WordResponse = functions.https.onRequest((req, res) => {
 
 ///////データに保存！！JSON形式で飛んできたデータを配列形式に直して格納。配列⇆JSONは参考:https://www.sejuku.net/blog/47716//////////
 exports.StoreData = functions.https.onCall((req, res) => {
+
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
     return;

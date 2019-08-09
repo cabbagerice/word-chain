@@ -18,8 +18,6 @@ var input_word = req.body.text;
 
 
 
-
-
 //////////文字列の妥当性の確認//////////
 if (!(input_word.match(/^[ぁ-んー　]+$/))) {    //"ー"の後ろの文字は全角スペース。なんかここのifオートインデントうまくいかんからコードミスってる可能性ある。
 var headers = {
@@ -46,7 +44,7 @@ request(options, function (error, response, body) {
 
 ///////////入力文字列が辞書にあるかどうか調べる。けど、キーで検索かけれないから厳しいかも…////////////
 
-var isExit;
+var isExist;
 
 db.ref('/PDD_bot/'+ last_word +'/').once("value")
   .then(function(snapshot) {
