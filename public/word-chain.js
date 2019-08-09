@@ -216,17 +216,17 @@ var db = admin.database();
       //レスポンス
       var response = {};
       //リクエスト
-      let data = {"text": "あんこ", 
-                    "initial": "あ"};
-  
+      let data = {"text":"いあーご","initial":"い"};
+      
       //ajax
       $.ajax({
         type        : "POST",
-        url         : url,
+        url         : 'https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist',
         data        : JSON.stringify(data),  //object -> json
         async       : true,                    //true:非同期(デフォルト), false:同期
-        dataType    : "json",
-        contentType: 'application/json ;charset=utf-8' ,
+        headers     : {
+          'Content-Type': 'application/json',
+        },
         success     : function(data) {
           //data = JSON.parse(data);  //error
           response = data;
