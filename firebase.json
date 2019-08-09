@@ -27,12 +27,15 @@
       "source": "/promos/**",
       "dynamicLinks": true
     }, {
-      "source": "/isWordExist",
-      "function": "bisWordExist"
+      "source": "/word-chain",
+      "function": "isWordExist"
+    },{
+        "source": "/word-chain",
+        "function": "WordResponse"
     }],
 
     "headers": [ {
-      "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "source": "*",
       "headers": [ {
         "key": "Access-Control-Allow-Origin",
         "value": "*"
