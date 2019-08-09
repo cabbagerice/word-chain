@@ -158,7 +158,7 @@ var db = admin.database();
     //入力がひらがなかどうかを判別する関数
     function isHiragana(str){
         str = (str==null)?"":str;
-        if(str.match(/^[ぁ-んー　]*$/)){    //"ー"の後ろの文字は全角スペースです。
+        if(str.match(/^[ぁ-んーゔ]*$/)){    //"ー"の後ろの文字は全角スペースです。
           return true;
         }else{
           return false;
