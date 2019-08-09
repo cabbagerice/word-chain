@@ -14,7 +14,7 @@ def fi_le(head,source):
                 data.append(tmp)
                 tmp,flag=[],False
     '''File書き込み'''
-    with open(f'{head}.txt',mode="w") as f:
+    with open(f'./{head}.txt',mode="w") as f:
         for s in data:
             for ss in s:
                 f.write(ss)
