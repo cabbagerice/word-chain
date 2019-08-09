@@ -15,7 +15,7 @@ var input_word = req.body.text;
 //入ってきた文字列の予定 somethingにそのブツを入れる HTTPのPOSTリクエストの形状によって違うのでささリュート相談
 //GET POST取得：https://maku77.github.io/nodejs/express/handle-get-and-post-data.html
 
-
+/*
 //////////文字列の妥当性の確認//////////
 if (!(input_word.match(/^[ぁ-んー　]+$/))) {    //"ー"の後ろの文字は全角スペース。なんかここのifオートインデントうまくいかんからコードミスってる可能性ある。
 var headers = {
@@ -39,11 +39,11 @@ request(options, function (error, response, body) {
   //console.log('body:', body); // Print the HTML for the Google homepage.
 });//ここでエラー処理　へんなん入力すんな！って行って返すPOSTリクエストで。ひらがなの入力しか受け付けない。
 }
+*/
 
 
 
-
-
+/*
 //////////文字列の整形///////////////////
 var last_word = input_word.trim().charAt(input_word.length -1); //trimは空白消す charAtは引数の番号の文字を返してくれる　最後の文字を格納
 var semi_last_word = input_word.trim().charAt(input_word.length -2); //trimは空白消す charAtは引数の番号の文字を返してくれる　最後から２番目のもじをだす
@@ -54,7 +54,7 @@ if (last_word == 'ー' || last_word == 'っ'){ //===かも？？
   last_word = last_word.replace( 'ぁ', 'あ' ).replace( 'ぃ', 'い' ).replace( 'ぅ', 'う' ).replace( 'ぇ', 'え' ).replace( 'ぉ', 'お' );
 }
 ///////////////////////////////////////
-
+*/
 
 
 ///////////入力文字列が辞書にあるかどうか調べる。線形探索で実装してるから遅そう。二分探索…////////////
