@@ -218,100 +218,114 @@ var db = admin.database();
     }
 
 
-  function isWordExist(str_word, str_initial){
-    console.log(str_word + str_initial);
-    url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist";
-
-    var ans;
-
-    var JSONdata= {
-     "text": str_word,
-      "initial": str_initial
+    function isWordExist(str_word, str_initial){
+      console.log(str_word + str_initial);
+      url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist";
+    
+      var ans;
+    
+      var JSONdata= {
+        "text": str_word,
+        "initial": str_initial
+      };
+      console.log(JSON.stringify(JSONdata));
+    
+      return $.ajax({
+        type : 'post',
+        url : url,
+        data : JSON.stringify(JSONdata),
+        contentType: 'application/JSON',
+        async: false,
+        //dataType : 'JSON',
+        //scriptCharset: 'utf-8',
+    
+        success : function(data) {
+    
+          // Success
+          ans = JSON.stringify(data);
+          console.log("In" + ans);
+    
+          //alert("success");
+          //alert(JSON.stringify(data));
+          $("#response").html(JSON.stringify(data));
+          return ans;
+        },
+        error : function(data) {
+    
+          // Error
+          ans = JSON.stringify(data);
+          //alert("error");
+          //alert(JSON.stringify(data) );
+          $("#response").html(JSON.stringify(data));
+        }
+    
+      });
+      /*.done(function(data, textStatus, jqXHR) {
+        console.log("268" + ans);
+        return JSON.stringify(data);
+      }).fail(function(jqXHR, textStatus, errorThrown){
+        console.log('通信失敗');
+        return JSON.stringify(data);
+      })*/
+      //console.log("OUT" + ans);
+    
+    
+    
+      /*
+      var xhr = new XMLHttpRequest();
+    
+      xhr.open('POST', url);
+      xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+    
+      var JSONdata= {
+      word: str_word,
+      initial: str_initial
     };
+    
     console.log(JSON.stringify(JSONdata));
-
+    console.log(JSONdata);
+    
+    xhr.send( JSONdata );
+    
+    xhr.onreadystatechange = function() {
+    
+    if(xhr.readyState === 4 && xhr.status === 200) {
+    
+    console.log( xhr.responseText );
+    
+    }
+    }*/
+    
+    /*
+    //レスポンス
+    var response = {};
+    //リクエスト
+    let data = {"text": "あんこ",
+    "initial": "あ"};
+    
+    //ajax/*
     $.ajax({
-      type : 'post',
-      url : url,
-      data : JSON.stringify(JSONdata),
-      contentType: 'application/JSON',
-      //dataType : 'JSON',
-      //scriptCharset: 'utf-8',
-      success : function(data) {
-
-        // Success
-        ans = JSON.stringify(data);
-        console.log("In" + ans);
-        return ans;
-        //alert("success");
-        //alert(JSON.stringify(data));
-        $("#response").html(JSON.stringify(data));
-      },
-      error : function(data) {
-
-        // Error
-        ans = JSON.stringify(data);
-        //alert("error");
-        //alert(JSON.stringify(data) );
-        $("#response").html(JSON.stringify(data));
-      }
+    type        : "POST",
+    url         : url,
+    data        : JSON.stringify(data),  //object -> json
+    async       : true,                    //true:非同期(デフォルト), false:同期
+    dataType    : "json",
+    contentType: 'application/json ;charset=utf-8' ,
+    success     : function(data) {
+    //data = JSON.parse(data);  //error
+    response = data;
+    },
+    error       : function(XMLHttpRequest, textStatus, errorThrown) {
+    console.log("リクエスト時になんらかのエラーが発生しました\n" + url + "\n" + textStatus +":\n" + errorThrown);
+    }
     });
-
-  /*
-  var xhr = new XMLHttpRequest();
-
-  xhr.open('POST', url);
-  xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
-
-  var JSONdata= {
-  word: str_word,
-  initial: str_initial
-};
-
-console.log(JSON.stringify(JSONdata));
-console.log(JSONdata);
-
-xhr.send( JSONdata );
-
-xhr.onreadystatechange = function() {
-
-if(xhr.readyState === 4 && xhr.status === 200) {
-
-console.log( xhr.responseText );
-
-}
-}*/
-
-/*
-//レスポンス
-var response = {};
-//リクエスト
-let data = {"text": "あんこ",
-"initial": "あ"};
-
-//ajax/*
-$.ajax({
-type        : "POST",
-url         : url,
-data        : JSON.stringify(data),  //object -> json
-async       : true,                    //true:非同期(デフォルト), false:同期
-dataType    : "json",
-contentType: 'application/json ;charset=utf-8' ,
-success     : function(data) {
-//data = JSON.parse(data);  //error
-response = data;
-},
-error       : function(XMLHttpRequest, textStatus, errorThrown) {
-console.log("リクエスト時になんらかのエラーが発生しました\n" + url + "\n" + textStatus +":\n" + errorThrown);
-}
-});
-
-//表示
-console.log(data);
-return response;
-
-*/
-}
+    
+    //表示
+    console.log(data);
+    return response;
+    
+    */
+    }
 
 
 
