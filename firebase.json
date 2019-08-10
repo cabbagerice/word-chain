@@ -27,11 +27,16 @@
       "source": "/promos/**",
       "dynamicLinks": true
     }, {
-      "source": "/word-chain",
+
+      "source": "**/isWordExist",
       "function": "isWordExist"
-    },{
-        "source": "/word-chain",
-        "function": "WordResponse"
+    }, {
+      "source": "**/WordResponse",
+      "function": "WordResponse"
+    }, {
+      "source": "**/StoreData",
+      "function": "StoreData"
+
     }],
 
     "headers": [ {

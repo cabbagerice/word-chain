@@ -14,27 +14,37 @@ admin.initializeApp({
 
 //{"text":"文字列","initial":"文字列の頭文字"}の形のPOSTリクエストを受け付けて、データベースのPDD_botスキーマにアクセスし、ワードがあるかどうかをYESNOで返す.
 
+
+exports.isWordExist = functions.https.onRequest((req, res) => {
+  /*if (req.method !== 'POST') {
 exports.isWordExist = functions.https.onCall((req, res) => {
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
     return;
-  }
+  }*/
+
+  //req = JSON.parse(request);
+
 
   var db = admin.database();
 
   db.ref('/PDD_bot/'+ req.body.initial +'/').once("value")
-    .then((snapshot) =>{
-      if(true === snapshot.child(req.body.text).exists()){
-        isExist = "YES";
-      }else{
-        isExist = "NO";
-      }
-      res.status(200).send(isExist);
-      return isExist;
-    }).catch(e => {
-        console.log(e);
-        res.sendStatus(500);
-    });
+  .then((snapshot) =>{
+    if(true === snapshot.child(req.body.text).exists()){
+      isExist = "YES";
+    }else{
+      isExist = "NO";
+    }
+
+    res.setHeader('Access-Control-Allow-Origin', "https://wordchain-bfb8b.web.app");
+    res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-type,Accept,X-Custom-Header');
+    res.status(200).send(isExist);
+    return 1;
+  }).catch(e => {
+    console.log(e);
+    res.sendStatus(500);
+  });
 
 });
 
@@ -50,15 +60,17 @@ exports.WordResponse = functions.https.onRequest((req, res) => {
   var db = admin.database();
 
   db.ref('/PDD_hum/'+ req.body.lastword +'/' + req.body.random_num).once("value")
-    .then((snapshot) =>{
-      replyword = snapshot.val();
-      res.status(200).send(replyword);
-      return replyword;
-    }).catch(e => {
-        console.log(e);
-        res.sendStatus(500);
-    });
+  .then((snapshot) =>{
+    replyword = snapshot.val();
+    res.status(200).send(replyword);
+    return replyword;
+  }).catch(e => {
+    console.log(e);
+    res.sendStatus(500);
+  });
 });
+
+
 
 ///////データに保存！！JSON形式で飛んできたデータを配列形式に直して格納。配列⇆JSONは参考:https://www.sejuku.net/blog/47716//////////
 exports.StoreData = functions.https.onCall((req, res) => {
@@ -69,16 +81,14 @@ exports.StoreData = functions.https.onCall((req, res) => {
   }
 
   var db = admin.database();
+  //var ref = db.ref('/GAME/');
 
-  db.ref('/GAME/'+ req.body.lastword +'/' + req.body.random_num).once("value")
-    .then((snapshot) =>{
-      replyword = snapshot.val();
-      res.status(200).send(replyword);
-      return replyword;
-    }).catch(e => {
-        console.log(e);
-        res.sendStatus(500);
-    });
+  //var usersRef = ref.child("users");
+
+  db.ref('/GAME/').push().set({
+    TimeStamp: firebase.database.ServerValue.TIMESTAMP,
+    Log: JSON.stringify(req.body) //JSONのデコード:https://www.sejuku.net/blog/79911
+  });
 });
 
 
@@ -86,16 +96,16 @@ exports.StoreData = functions.https.onCall((req, res) => {
 
 /*
 exports.makeUppercase = functions.database.ref('/PDD_hum/{pushId}/')
-    .onCreate((snapshot, context) => {
-      // Grab the current value of what was written to the Realtime Database.
-      const original = snapshot.val();
-      console.log('Uppercasing', context.params.pushId, original);
-      const uppercase = original.toUpperCase();
-      // You must return a Promise when performing asynchronous tasks inside a Functions such as
-      // writing to the Firebase Realtime Database.
-      // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-      return snapshot.ref.parent.child('uppercase').set(uppercase);
-    });
+.onCreate((snapshot, context) => {
+// Grab the current value of what was written to the Realtime Database.
+const original = snapshot.val();
+console.log('Uppercasing', context.params.pushId, original);
+const uppercase = original.toUpperCase();
+// You must return a Promise when performing asynchronous tasks inside a Functions such as
+// writing to the Firebase Realtime Database.
+// Setting an "uppercase" sibling in the Realtime Database returns a Promise.
+return snapshot.ref.parent.child('uppercase').set(uppercase);
+});
 */
 
 
