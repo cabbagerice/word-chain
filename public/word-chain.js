@@ -45,7 +45,7 @@ var db = admin.database();
         })
       }).then(() => {
         return botui.message.bot({ // second one
-          delay: 1000, // wait 1 sec.
+          delay: 500, // wait 1 sec.
           content: 'はじめは「しりとり」の「り」'
         })
       }).then(() => {
@@ -174,7 +174,6 @@ var db = admin.database();
         
       }).then(function(){
           console.log(used);
-          if(endnum <= 3){
             botui.message.bot({
               content: "続けますか"
             }).then( ()=> {
@@ -186,8 +185,7 @@ var db = admin.database();
                   },{
                     text: 'finish',
                     value: 'finish'
-                  }
-                ]
+                  }]
               })
             }).then( res => {
               conti = res.value;
@@ -195,18 +193,27 @@ var db = admin.database();
                 word_chain(preend);
               }else{
                 botui.message.bot({
-                  delay: 100,
+                  delay: 500,
                   content: "ありがとうございました"
+                }).then(()=>{
+                  return botui.action.button({
+                    delay: 500,
+                    action: [{
+                      text: 'topへ',
+                      value: 'totop'
+                    }]
+                  }).then(res =>{
+                    var totop = res.value;
+                    if(totop === "totop"){
+                      window.location.href = "index.html";
+                    }
+                  })
                 })
               }
             })
-          }else{
-            botui.message.bot({
-              content: "ありがとうございました"
-            })
-          }
-        });
-    }
+          });
+        }
+
 
     
 
@@ -262,9 +269,7 @@ var db = admin.database();
       form.submit();
       
     }
-    function getForm(value){
 
-    }
 
     function randompick(last_word){
       {
