@@ -27,6 +27,7 @@
       "source": "/promos/**",
       "dynamicLinks": true
     }, {
+
       "source": "**/isWordExist",
       "function": "isWordExist"
     }, {
@@ -35,10 +36,11 @@
     }, {
       "source": "**/StoreData",
       "function": "StoreData"
+
     }],
 
     "headers": [ {
-      "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "source": "*",
       "headers": [ {
         "key": "Access-Control-Allow-Origin",
         "value": "*"

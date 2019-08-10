@@ -33,33 +33,35 @@ var db = admin.database();
   init();
 
 
-  function init(){
-    //初期メッセージ
-    botui.message.bot({ // show first message
-      delay: 200,
-      content: 'hello'
-    }).then(() => {
-      return botui.message.bot({ // second one
-        delay: 1000, // wait 1 sec.
-        content: 'Let\'s Shiritori'
-      })
-    }).then(() => {
-      return botui.message.bot({ // second one
-        delay: 1000, // wait 1 sec.
-        content: 'First character is 「り」of 「しりとり」'
-      })
-    }).then(() => {
-      return botui.action.text({ // let user do something
-        delay: 500,
-        action: {
-          placeholder: 'り'
-        }
-      })
-    }).then(res => {
-      curword = res.value;
-      checkinput(curword, 'り');
-    });
-  }
+    function init(){
+      //初期メッセージ
+      botui.message.bot({ // show first message
+        delay: 200,
+        content: 'こんにちは'
+      }).then(() => {
+        return botui.message.bot({ // second one
+          delay: 500, // wait 1 sec.
+          content: 'しりとりしましょう'
+        })
+      }).then(() => {
+        return botui.message.bot({ // second one
+          delay: 500, // wait 1 sec.
+          content: 'はじめは「しりとり」の「り」'
+        })
+      }).then(() => {
+        return botui.action.text({ // let user do something
+          delay: 500,
+          action: {
+            placeholder: 'り'
+          }
+        })
+      }).then(res => {
+        curword = res.value;
+        checkinput(curword, 'り');
+      });
+    }
+
+  
 
   //入力された語がしりとりとして成立しているかを判別し、繰り返し入力を促すver.
   //小文字を処理するようにする(日本語の小文字大文字を変換する機能はない)
@@ -156,62 +158,70 @@ var db = admin.database();
     }
   }
 
-  //入力がひらがなかどうかを判別する関数
-  function isHiragana(str){
-    str = (str==null)?"":str;
-    if(str.match(/^[ぁ-んー　]*$/)){    //"ー"の後ろの文字は全角スペースです。
-    return true;
-  }else{
-    return false;
-  }
-}
 
-
-//プログラムを終了する処理
-function end(preend) {
-
-  botui.message.bot({
-    content: 'YOU LOSE\n\nなんで負けたか、明日まで考えといてください'
+    //入力がひらがなかどうかを判別する関数
+    function isHiragana(str){
+        str = (str==null)?"":str;
+        if(str.match(/^[ぁ-んーゔ]*$/)){    //"ー"の後ろの文字は全角スペースです。
+          return true;
+        }else{
+          return false;
+        }
+      }
+  
+  
+    //プログラムを終了する処理
+    function end(preend) {
 
   }).then(function(){
     console.log(used);
     if(endnum <= 3){
       botui.message.bot({
-        content: "続けますか"
-      }).then( ()=> {
-        return botui.action.button({
-          delay: 100,
-          action: [{
-            text: 'continue',
-            value: 'continue'
-          },{
-            text: 'finish',
-            value: 'finish'
-          }
-        ]
-      })
-    }).then( res => {
-      conti = res.value;
-      if(conti === "continue"){
-        word_chain(preend);
-      }else{
-        botui.message.bot({
-          delay: 100,
-          content: "ありがとうございました"
-        })
-      }
-    })
-  }else{
-    botui.message.bot({
-      content: "ありがとうございました"
-    })
-  }
-});
-}
+        content: 'YOU LOSE\n\nなんで負けたか、明日まで考えといてください'
+      }).then(function(){
+          console.log(used);
+            botui.message.bot({
+              content: "続けますか"
+            }).then( ()=> {
+              return botui.action.button({
+                delay: 100,
+                action: [{
+                    text: 'continue',
+                    value: 'continue'
+                  },{
+                    text: 'finish',
+                    value: 'finish'
+                  }]
+              })
+            }).then( res => {
+              conti = res.value;
+              if(conti === "continue"){
+                word_chain(preend);
+              }else{
+                botui.message.bot({
+                  delay: 500,
+                  content: "ありがとうございました"
+                }).then(()=>{
+                  return botui.action.button({
+                    delay: 500,
+                    action: [{
+                      text: 'topへ',
+                      value: 'totop'
+                    }]
+                  }).then(res =>{
+                    var totop = res.value;
+                    if(totop === "totop"){
+                      window.location.href = "index.html";
+                    }
+                  })
+                })
+              }
+            })
+          });
+        }
 
 
-
-function isWordExist(str_word, str_initial){
+    function isWordExist(str_word, str_initial){
   console.log(str_word + str_initial);
   url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist";
 
@@ -249,6 +259,7 @@ function isWordExist(str_word, str_initial){
       $("#response").html(JSON.stringify(data));
     }
   });
+
 
 
 
@@ -309,29 +320,6 @@ return response;
 }
 
 
-/*db, post関係のコード*/
-{
-  function postForm(value) {
-
-    var form = document.createElement('form');
-    var request = document.createElement('input');
-
-    form.method = 'POST';
-    form.action = 'https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist';
-
-    request.type = 'hidden'; //入力フォームが表示されないように
-    request.name = 'text';
-    request.value = value;
-
-    form.appendChild(request);
-    document.body.appendChild(form);
-
-    form.submit();
-
-  }
-  function getForm(value){
-
-  }
 
   function randompick(last_word){
     {
@@ -480,6 +468,7 @@ return response;
         num_of_words = NULL;　//なんかがおかしい時。
       }
     }
+
     var num_random = Math.floor( Math.random() * num_of_words ); //importとか要らないのかな
 
     ////////////////////
@@ -524,6 +513,5 @@ return response;
     return replyword;
   }
 }
-
 
 })();

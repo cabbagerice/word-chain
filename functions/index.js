@@ -17,6 +17,8 @@ admin.initializeApp({
 
 exports.isWordExist = functions.https.onRequest((req, res) => {
   /*if (req.method !== 'POST') {
+exports.isWordExist = functions.https.onCall((req, res) => {
+  if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
     return;
   }*/
@@ -71,7 +73,8 @@ exports.WordResponse = functions.https.onRequest((req, res) => {
 
 
 ///////データに保存！！JSON形式で飛んできたデータを配列形式に直して格納。配列⇆JSONは参考:https://www.sejuku.net/blog/47716//////////
-exports.StoreData = functions.https.onRequest((req, res) => {
+exports.StoreData = functions.https.onCall((req, res) => {
+
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
     return;
