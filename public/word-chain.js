@@ -172,96 +172,90 @@ var db = admin.database();
   
     //プログラムを終了する処理
     function end(preend) {
+      console.log(used);
 
-  }).then(function(){
-    console.log(used);
-    if(endnum <= 3){
       botui.message.bot({
         content: 'YOU LOSE\n\nなんで負けたか、明日まで考えといてください'
       }).then(function(){
-          console.log(used);
-            botui.message.bot({
-              content: "続けますか"
-            }).then( ()=> {
-              return botui.action.button({
-                delay: 100,
-                action: [{
-                    text: 'continue',
-                    value: 'continue'
-                  },{
-                    text: 'finish',
-                    value: 'finish'
-                  }]
-              })
-            }).then( res => {
-              conti = res.value;
-              if(conti === "continue"){
-                word_chain(preend);
-              }else{
-                botui.message.bot({
-                  delay: 500,
-                  content: "ありがとうございました"
-                }).then(()=>{
-                  return botui.action.button({
-                    delay: 500,
-                    action: [{
-                      text: 'topへ',
-                      value: 'totop'
-                    }]
-                  }).then(res =>{
-                    var totop = res.value;
-                    if(totop === "totop"){
-                      window.location.href = "index.html";
-                    }
-                  })
-                })
-              }
+        return botui.message.bot({
+          content: "続けますか"
+        });
+      }).then( ()=> {
+        return botui.action.button({
+          delay: 100,
+          action: [{
+            text: 'continue',
+            value: 'continue'
+          },{
+            text: 'finish',
+            value: 'finish'
+          }]
+        })
+      }).then( res => {
+        conti = res.value;
+        if(conti === "continue"){
+          word_chain(preend);
+        }else{
+          botui.message.bot({
+            delay: 500,
+            content: "ありがとうございました"
+          }).then(()=>{
+            return botui.action.button({
+              delay: 500,
+              action: [{
+                text: 'topへ',
+                value: 'totop'
+              }]
             })
-          });
+          }).then(res =>{
+            var totop = res.value;
+            if(totop === "totop"){
+              window.location.href = "index.html";
+            }
+          })
         }
-
-
-    function isWordExist(str_word, str_initial){
-  console.log(str_word + str_initial);
-  url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist";
-
-  var ans;
-
-  var JSONdata= {
-    "text": str_word,
-    "initial": str_initial
-  };
-  console.log(JSON.stringify(JSONdata));
-
-  $.ajax({
-    type : 'post',
-    url : url,
-    data : JSON.stringify(JSONdata),
-    contentType: 'application/JSON',
-    //dataType : 'JSON',
-    //scriptCharset: 'utf-8',
-    success : function(data) {
-
-      // Success
-      ans = JSON.stringify(data);
-      console.log("In" + ans);
-      return ans;
-      //alert("success");
-      //alert(JSON.stringify(data));
-      $("#response").html(JSON.stringify(data));
-    },
-    error : function(data) {
-
-      // Error
-      ans = JSON.stringify(data);
-      //alert("error");
-      //alert(JSON.stringify(data) );
-      $("#response").html(JSON.stringify(data));
+      })
     }
-  });
 
 
+  function isWordExist(str_word, str_initial){
+    console.log(str_word + str_initial);
+    url = "https://us-central1-wordchain-bfb8b.cloudfunctions.net/isWordExist";
 
+    var ans;
+
+    var JSONdata= {
+     "text": str_word,
+      "initial": str_initial
+    };
+    console.log(JSON.stringify(JSONdata));
+
+    $.ajax({
+      type : 'post',
+      url : url,
+      data : JSON.stringify(JSONdata),
+      contentType: 'application/JSON',
+      //dataType : 'JSON',
+      //scriptCharset: 'utf-8',
+      success : function(data) {
+
+        // Success
+        ans = JSON.stringify(data);
+        console.log("In" + ans);
+        return ans;
+        //alert("success");
+        //alert(JSON.stringify(data));
+        $("#response").html(JSON.stringify(data));
+      },
+      error : function(data) {
+
+        // Error
+        ans = JSON.stringify(data);
+        //alert("error");
+        //alert(JSON.stringify(data) );
+        $("#response").html(JSON.stringify(data));
+      }
+    });
 
   /*
   var xhr = new XMLHttpRequest();
@@ -512,6 +506,6 @@ return response;
     } );
     return replyword;
   }
-}
+
 
 })();
